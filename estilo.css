@@ -312,32 +312,52 @@ a:focus-visible {
 }
 
 .errores {
-    background-color: var(--bosque);
-    color: white;
+    background-color: var(--papel);
+    color: var(--tinta);
 }
 
 .errores .sobrelinea {
-    color: var(--lima);
+    color: var(--bosque);
 }
 
-.errores h2 {
-    color: white;
+.errores h1 {
+    color: var(--bosque);
+    font-size: 36px;
+}
+
+.errores .introduccion {
+    color: #3b4740;
+    font-size: 17px;
+    line-height: 1.7;
 }
 
 .errores-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: 18px;
     margin-top: 28px;
+}
+
+.errores-grid > div {
+    padding: 22px;
+    border: 1px solid #d3dfd4;
+    border-top: 4px solid var(--coral);
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(25, 34, 30, 0.07);
 }
 
 .errores-grid dt {
     margin-bottom: 8px;
+    color: var(--bosque);
+    font-size: 18px;
     font-weight: 700;
+    line-height: 1.4;
 }
 
 .errores-grid dd {
-    color: #e3ece5;
+    color: #3b4740;
+    font-size: 16px;
     line-height: 1.6;
 }
 
