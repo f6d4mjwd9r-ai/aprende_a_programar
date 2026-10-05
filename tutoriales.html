@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="imagenes/favicon-aprende.svg">
+    <title>Tutoriales | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html">Fundamentos</a></li>
+            <li><a href="tutoriales.html" aria-current="page">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="imagenes/logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion tutoriales">
+            <div class="contenedor tutoriales-layout">
+                <div>
+                    <p class="sobrelinea">Java y Python paso a paso</p>
+                    <h1>Una lógica, dos lenguajes</h1>
+                                        <p class="introduccion">Vamos a comprobar si un número es par. La lógica es igual en ambos lenguajes: calcular el residuo de dividir entre dos y verificar si es cero.</p>
+                    <ol class="lista-pasos">
+                                                <li><strong>Entrada</strong><span>El programa recibe un número entero, por ejemplo, 8.</span></li>
+                                                <li><strong>Proceso</strong><span>El operador % obtiene el residuo de la división: 8 % 2 es 0.</span></li>
+                                                <li><strong>Decisión</strong><span>La comparación residuo == 0 produce un valor verdadero o falso.</span></li>
+                                                <li><strong>Salida</strong><span>El programa muestra true/True si es par y false/False si es impar.</span></li>
+                    </ol>
+                </div>
+                <div class="ejemplo-codigo">
+                                        <p>Java: guarda el código como Main.java</p>
+                                        <pre><code>public class Main {
+    public static void main(String[] args) {
+        int numero = 8;
+        boolean esPar = numero % 2 == 0;
+        System.out.println(esPar);
+    }
+}</code></pre>
+                                        <p>Python: guarda el código como programa.py</p>
+                    <pre><code>numero = 8
+es_par = numero % 2 == 0
+print(es_par)</code></pre>
+                                        <p class="nota-codigo">Ejecuta Java con <code>javac Main.java</code> y luego <code>java Main</code>. Para Python usa <code>python programa.py</code> o, en Windows, <code>py programa.py</code>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p>Aprende a programar · Java y Python</p>
+                <p class="footer-dato">Mariana Jimenez Tibra <img class="footer-icono" src="imagenes/icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="imagenes/icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="imagenes/icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>
