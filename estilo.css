@@ -135,6 +135,31 @@ nav {
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
+.inicio-icono {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 4px;
+    place-items: center;
+    justify-self: center;
+    border-radius: 12px;
+    background-color: var(--papel);
+    color: var(--bosque);
+}
+
+.inicio-icono svg {
+    width: 34px;
+    height: 34px;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.inicio-icono .inicio-icono-acento {
+    stroke: var(--coral);
+}
+
 .inicio-enlace strong {
     color: var(--bosque);
     font-size: 20px;
@@ -211,6 +236,30 @@ a:focus-visible {
 
 .tema:nth-child(3) {
     animation-delay: 240ms;
+}
+
+.tema-icono {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    place-items: center;
+    border-radius: 10px;
+    background-color: var(--papel);
+    color: var(--bosque);
+}
+
+.tema-icono svg {
+    width: 30px;
+    height: 30px;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.tema-icono .tema-icono-acento {
+    stroke: var(--coral);
 }
 
 .tema-numero {
