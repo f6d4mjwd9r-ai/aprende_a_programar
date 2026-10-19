@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Cadenas y caracteres | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Trabajar con texto</p>
+                <h1>Cadenas y extracción de caracteres</h1>
+                <p class="introduccion">Una cadena de texto (o string) es una secuencia de caracteres, como una palabra o una frase. Puedes consultar un carácter individual o extraer una parte de la cadena mediante sus posiciones, llamadas índices.</p>
+                <h2>Las posiciones comienzan en cero</h2>
+                <p>En Java y Python, el primer carácter está en el índice <code>0</code>, el segundo en <code>1</code>, y así sucesivamente. En el texto <code>"Hola"</code>, el carácter <code>'H'</code> está en la posición 0 y la <code>'l'</code> está en la posición 2.</p>
+                <h2>Obtener un carácter o un fragmento</h2>
+                <p>Java usa <code>charAt(indice)</code> para obtener un carácter. Python permite acceder con corchetes. Para extraer varios caracteres, Python usa cortes: el índice final no se incluye.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>String palabra = "programar";
+char primero = palabra.charAt(0);
+String fragmento = palabra.substring(0, 4);
+
+System.out.println(primero);    // p
+System.out.println(fragmento); // prog</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>palabra = "programar"
+primero = palabra[0]
+fragmento = palabra[0:4]
+
+print(primero)    # p
+print(fragmento)  # prog</code></pre>
+                    </div>
+                </div>
+                <h2>Revisar la longitud y recorrer el texto</h2>
+                <p>La longitud indica cuántos caracteres tiene la cadena. Java la obtiene con <code>length()</code> y Python con <code>len()</code>. Puedes combinar la longitud con un ciclo para visitar cada posición.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>String texto = "sol";
+for (int i = 0; i &lt; texto.length(); i++) {
+    System.out.println(texto.charAt(i));
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>texto = "sol"
+for caracter in texto:
+    print(caracter)</code></pre>
+                    </div>
+                </div>
+                <p>Recuerda que intentar acceder a un índice que no existe produce un error. Asegúrate de que la posición esté entre cero y la longitud de la cadena menos uno.</p>
+                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>

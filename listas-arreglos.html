@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Listas y arreglos | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Agrupar valores</p>
+                <h1>Listas y arreglos</h1>
+                <p class="introduccion">Las colecciones permiten guardar varios valores relacionados bajo una sola variable. Así puedes recorrerlos con un ciclo, consultar un elemento y, según la colección, agregar o quitar valores.</p>
+                <h2>Posiciones e índices</h2>
+                <p>Los elementos se guardan en posiciones. En Java y Python, el primer índice es <code>0</code>, no <code>1</code>. Por eso, en una colección de tres elementos, las posiciones son 0, 1 y 2.</p>
+                <h2>Recorrer una colección</h2>
+                <p>Este ejemplo guarda tres calificaciones y calcula su promedio. Python usa listas; en Java el arreglo tiene un tamaño fijo y <code>ArrayList</code> permite agregar elementos.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>int[] notas = {8, 9, 10};
+int suma = 0;
+
+for (int nota : notas) {
+    suma += nota;
+}
+
+double promedio = (double) suma / notas.length;
+System.out.println(promedio);</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>notas = [8, 9, 10]
+suma = 0
+
+for nota in notas:
+    suma += nota
+
+promedio = suma / len(notas)
+print(promedio)</code></pre>
+                    </div>
+                </div>
+                <h2>Elige la colección adecuada</h2>
+                <p>Un arreglo sirve cuando conoces el tamaño y no necesitas cambiarlo. Una lista como la de Python o un <code>ArrayList</code> de Java es útil cuando necesitas una colección que pueda crecer o reducirse.</p>
+                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Funciones | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Reutilizar instrucciones</p>
+                <h1>Funciones</h1>
+                <p class="introduccion">Una función agrupa instrucciones que realizan una tarea. Puedes darle un nombre y ejecutarla cada vez que la necesites, en lugar de copiar el mismo código en varios lugares.</p>
+                <h2>Parámetros y resultados</h2>
+                <p>Los parámetros son los datos que recibe una función. Si la función calcula algo, puede devolver el resultado con <code>return</code>. Así, otras partes del programa pueden utilizarlo.</p>
+                <ul>
+                    <li>Define la tarea con un nombre claro.</li>
+                    <li>Recibe como parámetros solo los datos que necesita.</li>
+                    <li>Devuelve un resultado si la tarea produce uno.</li>
+                </ul>
+                <h2>Calcular el área de un rectángulo</h2>
+                <p>La función recibe el ancho y el alto, los multiplica y devuelve el área. En Java, las funciones que pertenecen a una clase se llaman métodos.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>public class Main {
+    static double area(double ancho, double alto) {
+        return ancho * alto;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(area(4, 3));
+    }
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>def area(ancho, alto):
+    return ancho * alto
+
+resultado = area(4, 3)
+print(resultado)</code></pre>
+                    </div>
+                </div>
+                <h2>Cuándo conviene crear una función</h2>
+                <p>Conviene cuando un bloque de instrucciones se repite, cuando una tarea se puede describir con un nombre, o cuando dividir un problema hace que el programa sea más fácil de leer y probar.</p>
+                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>

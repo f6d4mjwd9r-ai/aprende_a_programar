@@ -29,7 +29,7 @@
                 <h1>Fundamentos de Java y Python</h1>
                 <p class="introduccion">Java y Python permiten crear instrucciones, trabajar con datos y resolver problemas. Comparten conceptos como variables, condiciones y ciclos, pero difieren en la sintaxis y en los paradigmas que enfatizan.</p>
                 <div class="temas-grid">
-                    <article class="tema">
+                    <a class="tema tema-enlace" href="algoritmos.html">
                         <span class="tema-icono" aria-hidden="true">
                             <svg viewBox="0 0 48 48" fill="none">
                                 <rect x="17" y="4" width="14" height="10" rx="2"/>
@@ -41,8 +41,9 @@
                         <h2>Algoritmos</h2>
                         <p>Son conjuntos ordenados de pasos para resolver un problema o completar una tarea.</p>
                         <p class="ejemplo">Ejemplo: leer dos números, sumarlos y mostrar el resultado.</p>
-                    </article>
-                    <article class="tema">
+                        <span class="tema-accion">Ver explicación completa</span>
+                    </a>
+                    <a class="tema tema-enlace" href="datos-variables.html">
                         <span class="tema-icono" aria-hidden="true">
                             <svg viewBox="0 0 48 48" fill="none">
                                 <path d="M17 10h-3a4 4 0 0 0-4 4v4a4 4 0 0 1-4 4 4 4 0 0 1 4 4v4a4 4 0 0 0 4 4h3m14-24h3a4 4 0 0 1 4 4v4a4 4 0 0 0 4 4 4 4 0 0 0-4 4v4a4 4 0 0 1-4 4h-3"/>
@@ -52,8 +53,9 @@
                         <h2>Datos y variables</h2>
                         <p>Los tipos comunes incluyen enteros, decimales, texto y valores booleanos. Java declara el tipo de cada variable; Python lo determina a partir del valor asignado.</p>
                         <p class="ejemplo">Java: <code>int edad = 20;</code> · Python: <code>edad = 20</code>. En Python puedes consultar un tipo con <code>type(edad)</code>.</p>
-                    </article>
-                    <article class="tema">
+                        <span class="tema-accion">Ver explicación completa</span>
+                    </a>
+                    <a class="tema tema-enlace" href="condiciones-ciclos.html">
                         <span class="tema-icono" aria-hidden="true">
                             <svg viewBox="0 0 48 48" fill="none">
                                 <path d="M24 5 40 14v20l-16 9L8 34V14l16-9Z"/>
@@ -64,8 +66,9 @@
                         <h2>Condiciones y ciclos</h2>
                         <p>Las condiciones <code>if</code> y <code>else</code> eligen qué instrucciones ejecutar. Los ciclos <code>for</code> y <code>while</code> repiten acciones; sirven, por ejemplo, para procesar todos los elementos de una lista.</p>
                         <p class="ejemplo">Java usa llaves y suele escribir <code>else if</code>; Python usa dos puntos, sangría y <code>elif</code>.</p>
-                    </article>
-                    <article class="tema">
+                        <span class="tema-accion">Ver explicación completa</span>
+                    </a>
+                    <a class="tema tema-enlace" href="funciones.html">
                         <span class="tema-icono" aria-hidden="true">
                             <svg viewBox="0 0 48 48" fill="none">
                                 <path d="M17 14c-4 0-6 3-6 7v6c0 4 2 7 6 7m14-20c4 0 6 3 6 7v6c0 4-2 7-6 7"/>
@@ -76,8 +79,21 @@
                         <h2>Funciones</h2>
                         <p>Una función agrupa instrucciones bajo un nombre. Puede recibir parámetros y devolver un resultado. En Java, las funciones asociadas a una clase se llaman métodos.</p>
                         <p class="ejemplo">Python las define con <code>def</code>; Java especifica el tipo que devuelve y el de cada parámetro.</p>
-                    </article>
-                    <article class="tema">
+                        <span class="tema-accion">Ver explicación completa</span>
+                    </a>
+                    <a class="tema tema-enlace" href="cadenas-caracteres.html">
+                        <span class="tema-icono" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M8 16h32M8 32h32M16 8v32M32 8v32"/>
+                                <path class="tema-icono-acento" d="m12 24 4-8 4 8m-6-3h4m8 3 4-8 4 8m-6-3h4"/>
+                            </svg>
+                        </span>
+                        <h2>Cadenas y caracteres</h2>
+                        <p>Aprende a guardar texto y acceder a caracteres o fragmentos usando sus posiciones.</p>
+                        <p class="ejemplo">Java usa <code>charAt</code>; Python permite indexar y obtener segmentos con cortes.</p>
+                        <span class="tema-accion">Ver explicación completa</span>
+                    </a>
+                    <a class="tema tema-enlace" href="listas-arreglos.html">
                         <span class="tema-icono" aria-hidden="true">
                             <svg viewBox="0 0 48 48" fill="none">
                                 <rect x="10" y="7" width="28" height="34" rx="3"/>
@@ -88,8 +104,9 @@
                         <h2>Listas y arreglos</h2>
                         <p>Permiten guardar varios valores relacionados y procesarlos con ciclos. Python ofrece listas; Java usa arreglos y colecciones como <code>ArrayList</code>.</p>
                         <p class="ejemplo">Una lista de calificaciones facilita calcular un promedio sin crear una variable por cada nota.</p>
-                    </article>
-                    <article class="tema">
+                        <span class="tema-accion">Ver explicación completa</span>
+                    </a>
+                    <a class="tema tema-enlace" href="clases-objetos.html">
                         <span class="tema-icono" aria-hidden="true">
                             <svg viewBox="0 0 48 48" fill="none">
                                 <path d="m24 5 16 9v20l-16 9-16-9V14l16-9Z"/>
@@ -100,7 +117,8 @@
                         <h2>Clases y objetos</h2>
                         <p>Una clase describe datos y acciones que tendrán sus objetos. Java organiza sus programas alrededor de clases; Python también permite definirlas.</p>
                         <p class="ejemplo">Una clase <code>Libro</code> podría guardar el título y el autor de cada libro.</p>
-                    </article>
+                        <span class="tema-accion">Ver explicación completa</span>
+                    </a>
                 </div>
             </div>
         </section>

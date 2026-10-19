@@ -230,6 +230,32 @@ a:focus-visible {
     animation: entrada-suave 600ms ease-out both;
 }
 
+.tema-enlace {
+    display: grid;
+    align-content: start;
+    color: var(--tinta);
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.tema-enlace:hover,
+.tema-enlace:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.14);
+}
+
+.tema-accion {
+    margin-top: 18px;
+    color: var(--bosque);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tema-accion::after {
+    content: " →";
+    color: var(--coral);
+}
+
 .tema:nth-child(2) {
     animation-delay: 120ms;
 }
@@ -285,6 +311,70 @@ a:focus-visible {
     padding-top: 12px;
     border-top: 1px solid #d9dfe7;
     font-size: 14px;
+}
+
+.detalle-fundamento {
+    background-color: var(--papel);
+}
+
+.detalle-contenido {
+    max-width: 900px;
+}
+
+.detalle-contenido h2 {
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+.detalle-contenido p {
+    margin-top: 12px;
+    color: #333;
+    line-height: 1.7;
+}
+
+.detalle-contenido ul {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 0 24px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.detalle-codigo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.detalle-codigo > div {
+    min-width: 0;
+    padding: 20px;
+    border-radius: 2px;
+    background-color: var(--tinta);
+    color: white;
+}
+
+.detalle-codigo h3 {
+    color: var(--lima);
+    font-size: 16px;
+}
+
+.detalle-codigo pre {
+    overflow-x: auto;
+    margin-top: 14px;
+    color: #b9d8ff;
+    font-family: Consolas, monospace;
+    line-height: 1.6;
+}
+
+.volver-fundamentos {
+    display: inline-block;
+    margin-top: 28px;
+    color: var(--bosque);
+    font-weight: 700;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 4px;
 }
 
 .tutoriales {
@@ -504,6 +594,7 @@ footer h2 {
     nav,
     .logo-sitio,
     .tema,
+    .tema-enlace,
     footer,
     .inicio-enlace {
         animation: none;
@@ -544,6 +635,7 @@ footer h2 {
 
     .temas-grid,
     .tutoriales-layout,
+    .detalle-codigo,
     .ejercicios-grid,
     .errores-grid {
         grid-template-columns: 1fr;

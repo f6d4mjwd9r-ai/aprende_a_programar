@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Datos y variables | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Guardar información</p>
+                <h1>Datos y variables</h1>
+                <p class="introduccion">Los datos son la información que usa un programa. Una variable es un nombre asociado a un valor, para poder guardarlo, consultarlo y utilizarlo durante la ejecución.</p>
+                <h2>Tipos de datos comunes</h2>
+                <ul>
+                    <li><strong>Enteros:</strong> números sin parte decimal, como <code>12</code>.</li>
+                    <li><strong>Decimales:</strong> números con fracción, como <code>3.5</code>.</li>
+                    <li><strong>Texto:</strong> caracteres entre comillas, como <code>"Hola"</code>.</li>
+                    <li><strong>Booleanos:</strong> valores de verdad, <code>true</code> o <code>false</code> en Java y <code>True</code> o <code>False</code> en Python.</li>
+                </ul>
+                <h2>Declarar y cambiar variables</h2>
+                <p>En Java se indica el tipo al declarar una variable y ese tipo no cambia. Python determina el tipo a partir del valor asignado. En ambos lenguajes se puede actualizar el valor de una variable compatible.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>int edad = 20;
+double altura = 1.68;
+String nombre = "Ana";
+boolean estudia = true;
+
+edad = edad + 1;
+System.out.println(edad);</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>edad = 20
+altura = 1.68
+nombre = "Ana"
+estudia = True
+
+edad = edad + 1
+print(edad)</code></pre>
+                    </div>
+                </div>
+                <h2>Elige buenos nombres</h2>
+                <p>Usa nombres que expliquen para qué sirve cada dato, como <code>totalCompra</code> o <code>promedio</code>. Evita espacios y nombres que no describan el contenido. Python suele usar <code>snake_case</code>; Java suele usar <code>camelCase</code> para variables.</p>
+                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>

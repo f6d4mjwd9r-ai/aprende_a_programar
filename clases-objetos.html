@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Clases y objetos | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Modelar conceptos</p>
+                <h1>Clases y objetos</h1>
+                <p class="introduccion">Una clase es una descripción que reúne datos y acciones relacionados. Un objeto es un ejemplar concreto creado a partir de esa descripción, con sus propios valores.</p>
+                <h2>Una clase para representar libros</h2>
+                <p>La clase <code>Libro</code> puede definir el título y el autor como datos, y una acción para mostrar una descripción. Cada libro creado será un objeto que tendrá sus propios datos.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>class Libro {
+    String titulo;
+    String autor;
+
+    Libro(String titulo, String autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    void mostrar() {
+        System.out.println(titulo + " — " + autor);
+    }
+}
+
+Libro libro = new Libro("El principito", "Antoine");
+libro.mostrar();</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>class Libro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+
+    def mostrar(self):
+        print(f"{self.titulo} — {self.autor}")
+
+libro = Libro("El principito", "Antoine")
+libro.mostrar()</code></pre>
+                    </div>
+                </div>
+                <h2>Datos y métodos</h2>
+                <p>Los datos de un objeto se suelen llamar atributos. Las funciones definidas dentro de la clase son métodos: describen acciones que ese objeto puede realizar. En Java se accede al objeto creado mediante una referencia; en Python, <code>self</code> representa el objeto actual dentro de sus métodos.</p>
+                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>

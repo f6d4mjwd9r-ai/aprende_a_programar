@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Condiciones y ciclos | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Tomar decisiones y repetir</p>
+                <h1>Condiciones y ciclos</h1>
+                <p class="introduccion">Las condiciones permiten elegir qué instrucciones ejecutar según una situación. Los ciclos repiten instrucciones cuando una tarea se debe realizar varias veces.</p>
+                <h2>Elegir con una condición</h2>
+                <p>Una expresión como <code>nota >= 6</code> se evalúa como verdadera o falsa. Con <code>if</code> se ejecuta una acción si es verdadera; <code>else</code> ofrece una alternativa. Para varias opciones, Java utiliza <code>else if</code> y Python utiliza <code>elif</code>.</p>
+                <h2>Repetir con ciclos</h2>
+                <p>Usa un ciclo <code>for</code> cuando puedes recorrer una secuencia o conoces cuántas repeticiones necesitas. Usa <code>while</code> cuando la repetición depende de una condición que puede cambiar.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>int nota = 8;
+if (nota >= 6) {
+    System.out.println("Aprobado");
+} else {
+    System.out.println("A seguir practicando");
+}
+
+for (int i = 1; i <= 3; i++) {
+    System.out.println(i);
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>nota = 8
+if nota >= 6:
+    print("Aprobado")
+else:
+    print("A seguir practicando")
+
+for i in range(1, 4):
+    print(i)</code></pre>
+                    </div>
+                </div>
+                <h2>Evita ciclos infinitos</h2>
+                <p>En un ciclo <code>while</code>, comprueba que algo dentro del ciclo modifique la condición para que, tarde o temprano, deje de cumplirse. Si nunca cambia, el programa puede repetir el bloque indefinidamente.</p>
+                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>
