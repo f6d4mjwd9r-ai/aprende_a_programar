@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Matrices | Aprende a programar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Filas y columnas</p>
+                <h1>Matrices</h1>
+                <p class="introduccion">Una matriz organiza valores en filas y columnas, como una tabla. Cada elemento se localiza con dos índices: el primero indica la fila y el segundo la columna. Como en los arreglos y las listas, los índices comienzan en cero.</p>
+                <h2>Declarar y consultar elementos</h2>
+                <p>En Java, una matriz de enteros se declara con <code>int[][]</code>. En Python, puede representarse como una lista cuyos elementos también son listas. En ambos casos, <code>matriz[1][2]</code> consulta el elemento de la segunda fila y la tercera columna.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>int[][] matriz = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+
+int elemento = matriz[1][2];
+System.out.println(elemento); // 6</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>matriz = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+elemento = matriz[1][2]
+print(elemento)  # 6</code></pre>
+                    </div>
+                </div>
+                <h2>Recorrer filas y columnas</h2>
+                <p>Para visitar todos los valores, se usan dos ciclos: uno para las filas y otro para las columnas. En Python, cada fila se puede recorrer directamente. En Java, los índices permiten acceder a cada elemento.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>for (int fila = 0; fila &lt; matriz.length; fila++) {
+    for (int columna = 0;
+         columna &lt; matriz[fila].length;
+         columna++) {
+        System.out.println(matriz[fila][columna]);
+    }
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>for fila in matriz:
+    for elemento in fila:
+        print(elemento)</code></pre>
+                    </div>
+                </div>
+                <h2>Revisa los límites</h2>
+                <p>Una matriz de dos filas y tres columnas tiene índices de fila 0 y 1, e índices de columna 0, 1 y 2. Consultar una posición fuera de esos límites produce un error. En Java, cada fila puede tener longitud distinta; en Python también es posible que las listas internas tengan tamaños diferentes.</p>
+                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto">
+                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
+                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+            </div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>

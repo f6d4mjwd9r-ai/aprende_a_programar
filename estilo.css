@@ -230,18 +230,72 @@ a:focus-visible {
     animation: entrada-suave 600ms ease-out both;
 }
 
-.tema-enlace {
+.tema-interactivo {
     display: grid;
     align-content: start;
+    gap: 12px;
+}
+
+.tema-contenido {
+    display: grid;
+    align-content: start;
+    gap: 12px;
     color: var(--tinta);
     text-decoration: none;
+}
+
+.tema-interactivo:hover,
+.tema-interactivo:focus-within {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.14);
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.tema-enlace:hover,
-.tema-enlace:focus-visible {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.14);
+.tema-ejecutar {
+    justify-self: start;
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 3px;
+    background-color: var(--bosque);
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tema-ejecutar:hover {
+    background-color: var(--tinta);
+}
+
+.tema-ejecutar:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 3px;
+}
+
+.salida-ejecucion {
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: var(--tinta);
+    color: white;
+}
+
+.salida-ejecucion p {
+    padding: 9px 12px;
+    border-bottom: 1px solid #46514b;
+    color: var(--lima);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.salida-ejecucion pre {
+    overflow-x: auto;
+    min-height: 42px;
+    padding: 12px;
+    color: #b9d8ff;
+    font-family: Consolas, monospace;
+    line-height: 1.5;
+    white-space: pre-wrap;
 }
 
 .tema-accion {
@@ -594,7 +648,7 @@ footer h2 {
     nav,
     .logo-sitio,
     .tema,
-    .tema-enlace,
+    .tema-interactivo,
     footer,
     .inicio-enlace {
         animation: none;
