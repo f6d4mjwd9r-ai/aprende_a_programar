@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Matrices | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -52,6 +53,16 @@ elemento = matriz[1][2]
 print(elemento)  # 6</code></pre>
                     </div>
                 </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Cómo se localiza un valor?</h2>
+                    <ol>
+                        <li>La matriz tiene dos filas: <code>[1, 2, 3]</code> y <code>[4, 5, 6]</code>. Se puede imaginar como una tabla de dos filas por tres columnas.</li>
+                        <li>El primer índice indica la fila y el segundo indica la columna. Ambos comienzan en cero.</li>
+                        <li><code>matriz[1]</code> selecciona la segunda fila, <code>[4, 5, 6]</code>. Después, <code>[2]</code> selecciona el tercer elemento de esa fila: <code>6</code>.</li>
+                        <li>Por eso <code>matriz[1][2]</code> guarda el valor 6 en <code>elemento</code>, y <code>println</code> o <code>print</code> lo muestra.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Resultado de consultar la posición [1][2]:</strong><code>6</code></p>
+                </div>
                 <h2>Recorrer filas y columnas</h2>
                 <p>Para visitar todos los valores, se usan dos ciclos: uno para las filas y otro para las columnas. En Python, cada fila se puede recorrer directamente. En Java, los índices permiten acceder a cada elemento.</p>
                 <div class="detalle-codigo">
@@ -71,6 +82,16 @@ print(elemento)  # 6</code></pre>
     for elemento in fila:
         print(elemento)</code></pre>
                     </div>
+                </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Qué hacen los dos ciclos?</h2>
+                    <ol>
+                        <li>El ciclo exterior visita cada fila de la matriz.</li>
+                        <li>Para cada fila, el ciclo interior visita cada columna y obtiene el valor de esa posición.</li>
+                        <li>Cada valor se muestra antes de pasar al siguiente. Así se recorren primero 1, 2, 3 y después 4, 5, 6.</li>
+                        <li><code>matriz.length</code> cuenta filas; <code>matriz[fila].length</code> cuenta las columnas de esa fila. En Python, <code>for fila in matriz</code> toma una fila cada vez.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Salida del recorrido:</strong><code>1<br>2<br>3<br>4<br>5<br>6</code></p>
                 </div>
                 <h2>Revisa los límites</h2>
                 <p>Una matriz de dos filas y tres columnas tiene índices de fila 0 y 1, e índices de columna 0, 1 y 2. Consultar una posición fuera de esos límites produce un error. En Java, cada fila puede tener longitud distinta; en Python también es posible que las listas internas tengan tamaños diferentes.</p>

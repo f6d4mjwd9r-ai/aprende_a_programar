@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Datos y variables | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -58,6 +59,18 @@ estudia = True
 edad = edad + 1
 print(edad)</code></pre>
                     </div>
+                </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Qué hace el programa paso a paso?</h2>
+                    <ol>
+                        <li><code>edad</code> comienza con el valor <code>20</code>. En Java, <code>int</code> indica que guardará un número entero.</li>
+                        <li><code>altura</code> guarda <code>1.68</code>; en Java, <code>double</code> permite guardar números decimales.</li>
+                        <li><code>nombre</code> guarda texto. Java usa <code>String</code>; Python reconoce el texto por las comillas.</li>
+                        <li><code>estudia</code> guarda una respuesta de sí o no. Este tipo se llama booleano: <code>true</code> en Java y <code>True</code> en Python.</li>
+                        <li><code>edad = edad + 1</code> toma el valor anterior, le suma uno y guarda el nuevo valor en <code>edad</code>. Es decir, <code>20 + 1 = 21</code>.</li>
+                        <li>La última instrucción muestra el nuevo valor de <code>edad</code>.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Lo que verás en la consola:</strong><code>21</code></p>
                 </div>
                 <h2>Elige buenos nombres</h2>
                 <p>Usa nombres que expliquen para qué sirve cada dato, como <code>totalCompra</code> o <code>promedio</code>. Evita espacios y nombres que no describan el contenido. Python suele usar <code>snake_case</code>; Java suele usar <code>camelCase</code> para variables.</p>

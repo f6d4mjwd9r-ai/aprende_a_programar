@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Listas y arreglos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -56,6 +57,18 @@ for nota in notas:
 promedio = suma / len(notas)
 print(promedio)</code></pre>
                     </div>
+                </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Cómo se calcula el promedio?</h2>
+                    <ol>
+                        <li><code>notas</code> contiene tres calificaciones: 8, 9 y 10. Cada valor ocupa una posición de la colección.</li>
+                        <li><code>suma</code> empieza en cero para poder acumular las calificaciones.</li>
+                        <li>El ciclo <code>for</code> visita cada nota una por una. <code>suma += nota</code> significa «suma esta nota al total»; al final, <code>8 + 9 + 10 = 27</code>.</li>
+                        <li><code>notas.length</code> en Java y <code>len(notas)</code> en Python cuentan cuántas notas hay: son 3.</li>
+                        <li>El programa divide el total entre la cantidad de notas: <code>27 / 3 = 9</code>. En Java, <code>(double)</code> convierte la suma a decimal para que la división no descarte decimales en otros ejemplos.</li>
+                        <li>La última instrucción muestra el promedio.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Lo que verás en la consola:</strong><code>9.0</code></p>
                 </div>
                 <h2>Elige la colección adecuada</h2>
                 <p>Un arreglo sirve cuando conoces el tamaño y no necesitas cambiarlo. Una lista como la de Python o un <code>ArrayList</code> de Java es útil cuando necesitas una colección que pueda crecer o reducirse.</p>

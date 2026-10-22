@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Clases y objetos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -47,8 +48,12 @@
     }
 }
 
-Libro libro = new Libro("El principito", "Antoine");
-libro.mostrar();</code></pre>
+public class Main {
+    public static void main(String[] args) {
+        Libro libro = new Libro("El principito", "Antoine");
+        libro.mostrar();
+    }
+}</code></pre>
                     </div>
                     <div>
                         <h3>Python</h3>
@@ -63,6 +68,17 @@ libro.mostrar();</code></pre>
 libro = Libro("El principito", "Antoine")
 libro.mostrar()</code></pre>
                     </div>
+                </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Cómo se crea y se usa el objeto?</h2>
+                    <ol>
+                        <li><code>class Libro</code> define el molde. Declara que cada libro tendrá un título, un autor y una acción para mostrarlos. El código Java está dentro de la clase <code>Main</code> y su método <code>main</code>, que es el punto de inicio del programa.</li>
+                        <li>El constructor <code>Libro(...)</code> en Java y <code>__init__(...)</code> en Python se ejecuta al crear un libro. Recibe el título y el autor y los guarda en el objeto.</li>
+                        <li><code>new Libro("El principito", "Antoine")</code> en Java y <code>Libro("El principito", "Antoine")</code> en Python crean un objeto con esos dos datos.</li>
+                        <li><code>libro.mostrar()</code> llama al método <code>mostrar</code>. El método reúne el título y el autor y los imprime separados por un guion.</li>
+                        <li>En Python, <code>self</code> se refiere al libro actual. En Java, <code>this</code> se usa dentro del constructor para distinguir los datos del objeto de los parámetros con el mismo nombre.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Lo que verás en la consola:</strong><code>El principito — Antoine</code></p>
                 </div>
                 <h2>Datos y métodos</h2>
                 <p>Los datos de un objeto se suelen llamar atributos. Las funciones definidas dentro de la clase son métodos: describen acciones que ese objeto puede realizar. En Java se accede al objeto creado mediante una referencia; en Python, <code>self</code> representa el objeto actual dentro de sus métodos.</p>

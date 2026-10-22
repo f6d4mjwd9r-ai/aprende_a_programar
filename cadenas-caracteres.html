@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Cadenas y caracteres | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -51,6 +52,16 @@ fragmento = palabra[0:4]
 print(primero)    # p
 print(fragmento)  # prog</code></pre>
                     </div>
+                </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Cómo se obtiene el carácter y el fragmento?</h2>
+                    <ol>
+                        <li><code>palabra</code> guarda el texto <code>"programar"</code>. Sus posiciones empiezan en cero: p está en 0, r en 1, o en 2 y g en 3.</li>
+                        <li><code>palabra.charAt(0)</code> en Java y <code>palabra[0]</code> en Python piden el carácter de la posición 0: la letra <code>p</code>.</li>
+                        <li><code>substring(0, 4)</code> en Java y <code>[0:4]</code> en Python extraen desde la posición 0 hasta antes de la 4. Por eso el fragmento contiene p, r, o, g: <code>"prog"</code>.</li>
+                        <li>Las instrucciones de salida muestran primero la letra y luego el fragmento, cada uno en una línea.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Lo que verás en la consola:</strong><code>p<br>prog</code></p>
                 </div>
                 <h2>Revisar la longitud y recorrer el texto</h2>
                 <p>La longitud indica cuántos caracteres tiene la cadena. Java la obtiene con <code>length()</code> y Python con <code>len()</code>. Puedes combinar la longitud con un ciclo para visitar cada posición.</p>
