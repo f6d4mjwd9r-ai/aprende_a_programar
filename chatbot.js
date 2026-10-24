@@ -33,7 +33,7 @@ function responderDuda(pregunta) {
         return "Un ciclo repite instrucciones. for suele servir para recorrer elementos o repetir una cantidad conocida de veces. while repite mientras una condición sea verdadera. En un while, recuerda cambiar algo para que la condición deje de cumplirse y el ciclo termine.";
     }
     if (/\b(funcion|funciones|parametro|parametros|return|metodo|metodos)\b/.test(texto)) {
-        return "Una función agrupa instrucciones para reutilizarlas. Puede recibir parámetros, que son sus datos de entrada, y devolver un resultado con return. Por ejemplo, una función area(ancho, alto) puede devolver ancho * alto. En Java, las funciones dentro de una clase suelen llamarse métodos.";
+        return "Una función agrupa instrucciones para reutilizarlas. Recibe argumentos que se asignan a sus parámetros y puede devolver un resultado con return. Croquis para area(4.0, 3.0):\n4.0 y 3.0 (argumentos)\n        ↓\narea(ancho, alto)\n[multiplica ancho * alto]\n        ↓ return\n12.0 (resultado para el programa)\nEn Java, las funciones dentro de una clase suelen llamarse métodos.";
     }
     if (/\b(lista|listas|arreglo|arreglos|array|coleccion|colecciones|indice|indices)\b/.test(texto)) {
         return "Una lista o arreglo guarda varios valores en orden. Se accede a cada elemento con un índice y el primero es el 0. Python usa listas como notas = [8, 9, 10]; Java puede usar int[] notas = {8, 9, 10}. Recorre sus elementos con un ciclo.";

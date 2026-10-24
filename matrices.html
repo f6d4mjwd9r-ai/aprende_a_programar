@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Matrices | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -31,6 +31,20 @@
                 <p class="introduccion">Una matriz organiza valores en filas y columnas, como una tabla. Cada elemento se localiza con dos índices: el primero indica la fila y el segundo la columna. Como en los arreglos y las listas, los índices comienzan en cero.</p>
                 <h2>Declarar y consultar elementos</h2>
                 <p>En Java, una matriz de enteros se declara con <code>int[][]</code>. En Python, puede representarse como una lista cuyos elementos también son listas. En ambos casos, <code>matriz[1][2]</code> consulta el elemento de la segunda fila y la tercera columna.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-matriz-titulo">
+                    <figcaption id="croquis-matriz-titulo">Croquis: el primer índice elige la fila; el segundo, la columna</figcaption>
+                    <div class="croquis-tabla-contenedor">
+                        <table class="croquis-tabla" aria-label="Matriz de dos filas y tres columnas">
+                            <thead><tr><th scope="col">Fila \ Columna</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">0</th><td>1</td><td>2</td><td>3</td></tr>
+                                <tr><th scope="row">1</th><td>4</td><td>5</td><td class="croquis-seleccion">6</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="croquis-nota"><code>matriz[1][2]</code> → fila 1, columna 2 → <strong>6</strong>.</p>
+                    <p class="croquis-idea"><strong>En simple:</strong> para encontrar una casilla, primero baja a la fila indicada y luego avanza a la columna indicada.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>
@@ -65,6 +79,29 @@ print(elemento)  # 6</code></pre>
                 </div>
                 <h2>Recorrer filas y columnas</h2>
                 <p>Para visitar todos los valores, se usan dos ciclos: uno para las filas y otro para las columnas. En Python, cada fila se puede recorrer directamente. En Java, los índices permiten acceder a cada elemento.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-recorrido-matriz-titulo">
+                    <figcaption id="croquis-recorrido-matriz-titulo">Croquis: el ciclo exterior cambia la fila y el interior recorre sus columnas</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Primera fila</span>
+                            <code>1 → 2 → 3</code>
+                            <span>Se visitan sus columnas de izquierda a derecha.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Cambia la fila</span>
+                            <code>fila 0 → fila 1</code>
+                            <span>Al terminar una fila, empieza la siguiente.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Segunda fila</span>
+                            <code>4 → 5 → 6</code>
+                            <span>El recorrido termina al visitar todos los valores.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> el primer ciclo cambia de fila; dentro de cada fila, el segundo ciclo visita cada columna.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>

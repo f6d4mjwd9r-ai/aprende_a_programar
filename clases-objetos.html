@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Clases y objetos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -31,6 +31,29 @@
                 <p class="introduccion">Una clase es una descripción que reúne datos y acciones relacionados. Un objeto es un ejemplar concreto creado a partir de esa descripción, con sus propios valores.</p>
                 <h2>Una clase para representar libros</h2>
                 <p>La clase <code>Libro</code> puede definir el título y el autor como datos, y una acción para mostrar una descripción. Cada libro creado será un objeto que tendrá sus propios datos.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-clase-titulo">
+                    <figcaption id="croquis-clase-titulo">Croquis: la clase es el molde; los objetos son los ejemplares</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Clase (molde)</span>
+                            <code>Libro</code>
+                            <span>Define los datos <code>titulo</code>, <code>autor</code> y la acción <code>mostrar()</code>.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Crear un objeto</span>
+                            <code>Libro("El principito", "Antoine")</code>
+                            <span>El constructor asigna valores al nuevo ejemplar.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Objeto y acción</span>
+                            <code>libro.mostrar()</code>
+                            <span>Muestra: El principito — Antoine.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> la clase describe cómo serán los libros; cada objeto es un libro concreto con sus propios datos.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Condiciones y ciclos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -31,8 +31,55 @@
                 <p class="introduccion">Las condiciones permiten elegir qué instrucciones ejecutar según una situación. Los ciclos repiten instrucciones cuando una tarea se debe realizar varias veces.</p>
                 <h2>Elegir con una condición</h2>
                 <p>Una expresión como <code>nota >= 6</code> se evalúa como verdadera o falsa. Con <code>if</code> se ejecuta una acción si es verdadera; <code>else</code> ofrece una alternativa. Para varias opciones, Java utiliza <code>else if</code> y Python utiliza <code>elif</code>.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-condicion-titulo">
+                    <figcaption id="croquis-condicion-titulo">Croquis: una condición elige qué camino seguir</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Dato</span>
+                            <code>nota = 8</code>
+                            <span>El programa comprueba la nota.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Pregunta</span>
+                            <code>¿nota &gt;= 6?</code>
+                            <span>8 es mayor o igual que 6: verdadero.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Elige una respuesta</span>
+                            <span class="croquis-opcion croquis-elegida"><strong>Verdadero</strong> → “Aprobado”</span>
+                            <span class="croquis-opcion"><strong>Falso</strong> → “A seguir practicando”</span>
+                            <span>Como la nota es 8, se toma el primer camino.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> <code>if</code> hace una pregunta; el programa elige una respuesta según sea verdadera o falsa.</p>
+                </figure>
                 <h2>Repetir con ciclos</h2>
                 <p>Usa un ciclo <code>for</code> cuando puedes recorrer una secuencia o conoces cuántas repeticiones necesitas. Usa <code>while</code> cuando la repetición depende de una condición que puede cambiar.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-ciclo-titulo">
+                    <figcaption id="croquis-ciclo-titulo">Croquis: el ciclo <code>for</code> repite el paso con cada valor</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Inicio</span>
+                            <code>i = 1</code>
+                            <span>Se prepara el primer valor.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Repeticiones</span>
+                            <code>1 → 2 → 3</code>
+                            <span>Se ejecuta la instrucción para cada valor.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Fin</span>
+                            <code>i = 4</code>
+                            <span>Ya no cumple <code>i &lt;= 3</code>; el ciclo termina.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> un ciclo repite el mismo paso con distintos valores y se detiene cuando ya no quedan valores que procesar.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Cadenas y caracteres | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -31,8 +31,36 @@
                 <p class="introduccion">Una cadena de texto (o string) es una secuencia de caracteres, como una palabra o una frase. Puedes consultar un carácter individual o extraer una parte de la cadena mediante sus posiciones, llamadas índices.</p>
                 <h2>Las posiciones comienzan en cero</h2>
                 <p>En Java y Python, el primer carácter está en el índice <code>0</code>, el segundo en <code>1</code>, y así sucesivamente. En el texto <code>"Hola"</code>, el carácter <code>'H'</code> está en la posición 0 y la <code>'l'</code> está en la posición 2.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-indices-texto-titulo">
+                    <figcaption id="croquis-indices-texto-titulo">Croquis: cada carácter de “programar” tiene un índice</figcaption>
+                    <div class="croquis-casillas" aria-label="Índices de los caracteres de programar">
+                        <div class="croquis-casilla croquis-seleccion"><span>índice 0</span><code>p</code></div>
+                        <div class="croquis-casilla"><span>índice 1</span><code>r</code></div>
+                        <div class="croquis-casilla"><span>índice 2</span><code>o</code></div>
+                        <div class="croquis-casilla"><span>índice 3</span><code>g</code></div>
+                        <div class="croquis-casilla"><span>índice 4</span><code>r</code></div>
+                        <div class="croquis-casilla"><span>índice 5</span><code>a</code></div>
+                        <div class="croquis-casilla"><span>índice 6</span><code>m</code></div>
+                        <div class="croquis-casilla"><span>índice 7</span><code>a</code></div>
+                        <div class="croquis-casilla"><span>índice 8</span><code>r</code></div>
+                    </div>
+                    <p class="croquis-nota"><code>palabra[0]</code> en Python o <code>palabra.charAt(0)</code> en Java devuelve <strong>p</strong>.</p>
+                    <p class="croquis-idea"><strong>En simple:</strong> igual que en una fila de casillas, el texto empieza a contar sus posiciones desde cero.</p>
+                </figure>
                 <h2>Obtener un carácter o un fragmento</h2>
                 <p>Java usa <code>charAt(indice)</code> para obtener un carácter. Python permite acceder con corchetes. Para extraer varios caracteres, Python usa cortes: el índice final no se incluye.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-fragmento-titulo">
+                    <figcaption id="croquis-fragmento-titulo">Croquis: el fragmento <code>[0:4]</code> incluye los índices 0, 1, 2 y 3, pero no el 4</figcaption>
+                    <div class="croquis-casillas">
+                        <div class="croquis-casilla croquis-seleccion"><span>0 · inicio</span><code>p</code></div>
+                        <div class="croquis-casilla croquis-seleccion"><span>1</span><code>r</code></div>
+                        <div class="croquis-casilla croquis-seleccion"><span>2</span><code>o</code></div>
+                        <div class="croquis-casilla croquis-seleccion"><span>3</span><code>g</code></div>
+                        <div class="croquis-casilla"><span>4 · límite</span><code>r</code></div>
+                    </div>
+                    <p class="croquis-nota">Resultado de <code>palabra[0:4]</code> o <code>palabra.substring(0, 4)</code>: <strong>“prog”</strong>.</p>
+                    <p class="croquis-idea"><strong>En simple:</strong> el primer número marca dónde empezar y el segundo dónde parar; esa posición final queda fuera.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>
@@ -65,6 +93,29 @@ print(fragmento)  # prog</code></pre>
                 </div>
                 <h2>Revisar la longitud y recorrer el texto</h2>
                 <p>La longitud indica cuántos caracteres tiene la cadena. Java la obtiene con <code>length()</code> y Python con <code>len()</code>. Puedes combinar la longitud con un ciclo para visitar cada posición.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-recorrer-texto-titulo">
+                    <figcaption id="croquis-recorrer-texto-titulo">Croquis: recorrer “sol” carácter por carácter</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Texto</span>
+                            <code>"sol"</code>
+                            <span>Longitud: 3 caracteres.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Ciclo</span>
+                            <code>s → o → l</code>
+                            <span>Se procesa un carácter en cada vuelta.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Salida</span>
+                            <code>s<br>o<br>l</code>
+                            <span>Se muestra cada carácter en una línea.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> el ciclo toma una letra, la muestra y luego pasa a la siguiente hasta terminar el texto.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>

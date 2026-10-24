@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Algoritmos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -36,6 +36,29 @@
                     <li><strong>Proceso:</strong> las operaciones que transforman esos datos.</li>
                     <li><strong>Salida:</strong> el resultado que se comunica, como el promedio.</li>
                 </ul>
+                <figure class="croquis-funcion" aria-labelledby="croquis-algoritmo-titulo">
+                    <figcaption id="croquis-algoritmo-titulo">Croquis: entrada → proceso → salida</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Entrada</span>
+                            <code>nota1 = 8<br>nota2 = 10</code>
+                            <span>Datos que recibe el problema.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Proceso</span>
+                            <code>(8 + 10) / 2</code>
+                            <span>Sumar y dividir entre dos.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Salida</span>
+                            <code>promedio = 9</code>
+                            <span>Resultado que comunica el programa.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> primero tenemos los datos, luego hacemos las cuentas y al final obtenemos la respuesta.</p>
+                </figure>
                 <h2>El mismo algoritmo en Java y Python</h2>
                 <p>La lógica no depende del lenguaje. En ambos ejemplos se calcula el promedio; lo que cambia es la forma de escribir las instrucciones.</p>
                 <div class="detalle-codigo">

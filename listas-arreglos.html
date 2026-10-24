@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Listas y arreglos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -31,8 +31,41 @@
                 <p class="introduccion">Las colecciones permiten guardar varios valores relacionados bajo una sola variable. Así puedes recorrerlos con un ciclo, consultar un elemento y, según la colección, agregar o quitar valores.</p>
                 <h2>Posiciones e índices</h2>
                 <p>Los elementos se guardan en posiciones. En Java y Python, el primer índice es <code>0</code>, no <code>1</code>. Por eso, en una colección de tres elementos, las posiciones son 0, 1 y 2.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-lista-titulo">
+                    <figcaption id="croquis-lista-titulo">Croquis: cada elemento ocupa una posición numerada desde cero</figcaption>
+                    <div class="croquis-casillas" aria-label="Lista de notas indexada">
+                        <div class="croquis-casilla"><span>índice 0</span><code>8</code></div>
+                        <div class="croquis-casilla"><span>índice 1</span><code>9</code></div>
+                        <div class="croquis-casilla croquis-seleccion"><span>índice 2</span><code>10</code></div>
+                    </div>
+                    <p class="croquis-nota"><code>notas[2]</code> consulta la tercera nota: <strong>10</strong>.</p>
+                    <p class="croquis-idea"><strong>En simple:</strong> cuenta las posiciones desde cero. Por eso, el índice 2 señala el tercer elemento.</p>
+                </figure>
                 <h2>Recorrer una colección</h2>
                 <p>Este ejemplo guarda tres calificaciones y calcula su promedio. Python usa listas; en Java el arreglo tiene un tamaño fijo y <code>ArrayList</code> permite agregar elementos.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-recorrer-lista-titulo">
+                    <figcaption id="croquis-recorrer-lista-titulo">Croquis: el ciclo acumula cada nota para calcular el promedio</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Colección</span>
+                            <code>8, 9, 10</code>
+                            <span>Tres elementos que se recorren en orden.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Acumulación</span>
+                            <code>0 → 8 → 17 → 27</code>
+                            <span>El ciclo añade cada nota a <code>suma</code>.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Promedio</span>
+                            <code>27 / 3 = 9</code>
+                            <span>Suma dividida entre la cantidad de notas.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> el programa suma las notas una por una y divide el total entre cuántas notas hay.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>

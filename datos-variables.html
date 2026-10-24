@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Datos y variables | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -36,8 +36,57 @@
                     <li><strong>Texto:</strong> caracteres entre comillas, como <code>"Hola"</code>.</li>
                     <li><strong>Booleanos:</strong> valores de verdad, <code>true</code> o <code>false</code> en Java y <code>True</code> o <code>False</code> en Python.</li>
                 </ul>
+                <figure class="croquis-funcion" aria-labelledby="croquis-tipos-titulo">
+                    <figcaption id="croquis-tipos-titulo">Croquis: cada variable tiene un nombre, un valor y un tipo</figcaption>
+                    <div class="croquis-flujo croquis-tarjetas">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Entero</span>
+                            <code>edad → 20</code>
+                            <span>Número sin decimales.</span>
+                        </div>
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Decimal</span>
+                            <code>altura → 1.68</code>
+                            <span>Número con fracción.</span>
+                        </div>
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Texto</span>
+                            <code>nombre → "Ana"</code>
+                            <span>Caracteres entre comillas.</span>
+                        </div>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Booleano</span>
+                            <code>estudia → true</code>
+                            <span>Valor verdadero o falso.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> una variable es como una caja con una etiqueta (su nombre) que guarda un dato de cierto tipo.</p>
+                </figure>
                 <h2>Declarar y cambiar variables</h2>
                 <p>En Java se indica el tipo al declarar una variable y ese tipo no cambia. Python determina el tipo a partir del valor asignado. En ambos lenguajes se puede actualizar el valor de una variable compatible.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-variable-titulo">
+                    <figcaption id="croquis-variable-titulo">Croquis: actualizar una variable</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Valor inicial</span>
+                            <code>edad = 20</code>
+                            <span>La variable guarda 20.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Operación</span>
+                            <code>edad + 1</code>
+                            <span>Se toma el valor anterior y se suma uno.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Nuevo valor</span>
+                            <code>edad = 21</code>
+                            <span>La variable ahora guarda 21.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> asignar un nuevo valor reemplaza lo que la variable guardaba antes.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>

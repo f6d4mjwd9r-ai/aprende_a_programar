@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Funciones | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -38,6 +38,29 @@
                 </ul>
                 <h2>Calcular el área de un rectángulo</h2>
                 <p>La función recibe el ancho y el alto, los multiplica y devuelve el área. En Java, las funciones que pertenecen a una clase se llaman métodos.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-funcion-titulo">
+                    <figcaption id="croquis-funcion-titulo">Croquis: cómo trabaja la función <code>area</code></figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Llamada y argumentos</span>
+                            <code>area(4.0, 3.0)</code>
+                            <span>El programa entrega ancho y alto.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">La función recibe los parámetros</span>
+                            <code>ancho = 4.0<br>alto = 3.0</code>
+                            <span>Calcula <code>ancho * alto</code>.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Valor devuelto con <code>return</code></span>
+                            <code>12.0</code>
+                            <span>El programa puede guardarlo o mostrarlo.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> la función recibe datos, hace su tarea y entrega el resultado al programa que la llamó.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>
