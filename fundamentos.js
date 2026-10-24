@@ -64,13 +64,13 @@ document.querySelectorAll(".tema-ejecutar").forEach((button) => {
         if (isExpanded) {
             outputPanel.hidden = true;
             button.setAttribute("aria-expanded", "false");
-            button.textContent = "Ejecutar ejemplo";
+            button.textContent = "Ver resultado de ejemplo";
             return;
         }
 
         output.textContent = runner();
         outputPanel.hidden = false;
         button.setAttribute("aria-expanded", "true");
-        button.textContent = "Ocultar resultado";
+        button.textContent = "Ocultar resultado de ejemplo";
     });
 });

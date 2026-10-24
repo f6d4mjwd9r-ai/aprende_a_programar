@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Instalación | Aprende a programar</title>
+    <meta name="description" content="Guía para preparar Python, el JDK de Java y un editor de código, o practicar con un compilador en línea.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Primeros pasos</p>
+                <h1>Prepara tu equipo para programar</h1>
+                <p class="introduccion">Puedes instalar las herramientas en tu computadora o comenzar con un compilador en línea. Para empezar, instala un lenguaje y elige un editor; no es necesario instalar todo a la vez.</p>
+                <h2>1. Instalar Python</h2>
+                <ol class="guia-pasos">
+                    <li>Descarga Python desde <a href="https://www.python.org/downloads/">python.org/downloads</a>.</li>
+                    <li>En Windows, durante la instalación marca <strong>Add Python to PATH</strong> si aparece esa opción.</li>
+                    <li>Abre una terminal y comprueba la instalación con <code>py --version</code>. En otros sistemas también puedes usar <code>python3 --version</code>.</li>
+                    <li>Guarda un archivo como <code>programa.py</code> y ejecútalo con <code>py programa.py</code> en Windows o <code>python3 programa.py</code> en macOS y Linux.</li>
+                </ol>
+                <h2>2. Instalar Java (JDK)</h2>
+                <ol class="guia-pasos">
+                    <li>Instala un JDK, que incluye el compilador y las herramientas necesarias. Puedes descargar Eclipse Temurin desde <a href="https://adoptium.net/temurin/releases/">adoptium.net</a>; elige una versión LTS y el instalador apropiado para tu sistema.</li>
+                    <li>Abre una terminal y verifica con <code>java -version</code> y <code>javac -version</code>.</li>
+                    <li>Guarda el ejemplo en un archivo llamado <code>Main.java</code>, porque la clase pública se llama <code>Main</code>.</li>
+                    <li>Compila y ejecuta desde esa carpeta: <code>javac Main.java</code> y luego <code>java Main</code>.</li>
+                </ol>
+                <h2>3. Elegir un editor</h2>
+                <p>Puedes comenzar con un editor de texto. <a href="https://code.visualstudio.com/download">Visual Studio Code</a> es una opción gratuita; para Java instala también la extensión Extension Pack for Java y para Python la extensión Python. Alternativamente, puedes usar un entorno integrado como IntelliJ IDEA Community para Java.</p>
+                <h2>4. Probar en línea sin instalar</h2>
+                <p>Un compilador en línea permite elegir Java o Python, pegar el código y pulsar Run. Si el programa pide datos, escríbelos en el panel llamado <em>Input</em>, <em>stdin</em> o similar antes de ejecutarlo. Por ejemplo, puedes probar <a href="https://onecompiler.com/python">Python</a> o <a href="https://onecompiler.com/java">Java</a> en OneCompiler.</p>
+                <p class="nota-codigo">Usa compiladores en línea con ejercicios de práctica; no pegues contraseñas, datos privados ni código confidencial.</p>
+                <p><a class="volver-fundamentos" href="index.html">← Volver al inicio</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto"><p>Aprende a programar · Java y Python</p></div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>

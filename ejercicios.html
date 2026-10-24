@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Ejercicios | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261019-chatbot">
+    <meta name="description" content="Practica programación con retos graduados de variables, condiciones, ciclos, funciones, listas y cadenas, con pistas y soluciones.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
     <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
@@ -31,34 +32,174 @@
                 <p class="introduccion">Resuelve cada reto en Java y en Python. Antes de programar, identifica los datos de entrada, los pasos necesarios y el resultado esperado. Después, prueba tu solución en ambos lenguajes.</p>
                 <div class="ejercicios-grid">
                     <article class="ejercicio">
-                        <span class="tema-numero">RETO 01 / VARIABLES</span>
+                        <span class="tema-numero">RETO 01 / VARIABLES · FÁCIL</span>
                         <h3>Calcula un promedio</h3>
-                        <p>Guarda tres calificaciones en variables, calcula su promedio y muestra el resultado.</p>
+                        <p>Calcula el promedio de tres calificaciones y muestra el resultado.</p>
+                        <p><strong>Entrada:</strong> 8, 9, 10<br><strong>Salida:</strong> 9.0</p>
+                        <p class="pista"><strong>Pista:</strong> suma las notas y divide entre la cantidad de notas.</p>
+                        <details>
+                            <summary>Mostrar solución en Java y Python</summary>
+                            <div class="solucion-codigo">
+                                <h4>Python</h4>
+                                <pre><code>notas = [8, 9, 10]
+promedio = sum(notas) / len(notas)
+print(promedio)</code></pre>
+                                <h4>Java</h4>
+                                <pre><code>public class Main {
+    public static void main(String[] args) {
+        double[] notas = {8, 9, 10};
+        double suma = 0;
+        for (double nota : notas) suma += nota;
+        System.out.println(suma / notas.length);
+    }
+}</code></pre>
+                            </div>
+                        </details>
                     </article>
                     <article class="ejercicio">
-                        <span class="tema-numero">RETO 02 / CONDICIONES</span>
+                        <span class="tema-numero">RETO 02 / CONDICIONES · FÁCIL</span>
                         <h3>Clasifica un número</h3>
                         <p>Lee un número e indica si es positivo, negativo o igual a cero.</p>
+                        <p><strong>Entrada:</strong> -3<br><strong>Salida:</strong> Negativo</p>
+                        <p class="pista"><strong>Pista:</strong> compara primero con 0 usando <code>&gt;</code> y <code>&lt;</code>.</p>
+                        <details>
+                            <summary>Mostrar solución en Java y Python</summary>
+                            <div class="solucion-codigo">
+                                <h4>Python</h4>
+                                <pre><code>numero = int(input())
+if numero > 0:
+    print("Positivo")
+elif numero < 0:
+    print("Negativo")
+else:
+    print("Cero")</code></pre>
+                                <h4>Java</h4>
+                                <pre><code>import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero = sc.nextInt();
+        if (numero > 0) System.out.println("Positivo");
+        else if (numero < 0) System.out.println("Negativo");
+        else System.out.println("Cero");
+        sc.close();
+    }
+}</code></pre>
+                            </div>
+                        </details>
                     </article>
                     <article class="ejercicio">
-                        <span class="tema-numero">RETO 03 / CICLOS</span>
+                        <span class="tema-numero">RETO 03 / CICLOS · FÁCIL</span>
                         <h3>Suma una secuencia</h3>
-                        <p>Usa un ciclo para sumar los números del 1 al 100 y muestra el total.</p>
+                        <p>Usa un ciclo para sumar los números del 1 al 100 y mostrar el total.</p>
+                        <p><strong>Entrada:</strong> ninguna<br><strong>Salida:</strong> 5050</p>
+                        <p class="pista"><strong>Pista:</strong> inicia la suma en 0 y agrega cada número en cada vuelta.</p>
+                        <details>
+                            <summary>Mostrar solución en Java y Python</summary>
+                            <div class="solucion-codigo">
+                                <h4>Python</h4>
+                                <pre><code>total = 0
+for numero in range(1, 101):
+    total += numero
+print(total)</code></pre>
+                                <h4>Java</h4>
+                                <pre><code>public class Main {
+    public static void main(String[] args) {
+        int total = 0;
+        for (int numero = 1; numero <= 100; numero++) {
+            total += numero;
+        }
+        System.out.println(total);
+    }
+}</code></pre>
+                            </div>
+                        </details>
                     </article>
                     <article class="ejercicio">
-                        <span class="tema-numero">RETO 04 / FUNCIONES</span>
+                        <span class="tema-numero">RETO 04 / FUNCIONES · MEDIO</span>
                         <h3>Convierte temperaturas</h3>
-                        <p>Crea una función que reciba grados Celsius y devuelva su equivalente en Fahrenheit. La fórmula es F = C * 9 / 5 + 32.</p>
+                        <p>Crea una función que convierta grados Celsius a Fahrenheit con la fórmula F = C × 9 / 5 + 32.</p>
+                        <p><strong>Entrada:</strong> 25 °C<br><strong>Salida:</strong> 77.0 °F</p>
+                        <p class="pista"><strong>Pista:</strong> recibe Celsius como parámetro y devuelve el cálculo.</p>
+                        <details>
+                            <summary>Mostrar solución en Java y Python</summary>
+                            <div class="solucion-codigo">
+                                <h4>Python</h4>
+                                <pre><code>def a_fahrenheit(celsius):
+    return celsius * 9 / 5 + 32
+
+print(a_fahrenheit(25))</code></pre>
+                                <h4>Java</h4>
+                                <pre><code>public class Main {
+    static double aFahrenheit(double celsius) {
+        return celsius * 9 / 5 + 32;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(aFahrenheit(25));
+    }
+}</code></pre>
+                            </div>
+                        </details>
                     </article>
                     <article class="ejercicio">
-                        <span class="tema-numero">RETO 05 / COLECCIONES</span>
+                        <span class="tema-numero">RETO 05 / COLECCIONES · MEDIO</span>
                         <h3>Busca el valor mayor</h3>
-                        <p>Guarda varios números en una lista o arreglo y encuentra el mayor recorriendo sus elementos.</p>
+                        <p>Recorre varios números y encuentra el valor más grande.</p>
+                        <p><strong>Entrada:</strong> 4, 9, 2<br><strong>Salida:</strong> 9</p>
+                        <p class="pista"><strong>Pista:</strong> guarda el primero como máximo inicial y actualízalo cuando encuentres uno mayor.</p>
+                        <details>
+                            <summary>Mostrar solución en Java y Python</summary>
+                            <div class="solucion-codigo">
+                                <h4>Python</h4>
+                                <pre><code>numeros = [4, 9, 2]
+mayor = numeros[0]
+for numero in numeros:
+    if numero > mayor:
+        mayor = numero
+print(mayor)</code></pre>
+                                <h4>Java</h4>
+                                <pre><code>public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {4, 9, 2};
+        int mayor = numeros[0];
+        for (int numero : numeros) {
+            if (numero > mayor) mayor = numero;
+        }
+        System.out.println(mayor);
+    }
+}</code></pre>
+                            </div>
+                        </details>
                     </article>
                     <article class="ejercicio">
-                        <span class="tema-numero">RETO 06 / CADENAS</span>
+                        <span class="tema-numero">RETO 06 / CADENAS · MEDIO</span>
                         <h3>Cuenta las vocales</h3>
-                        <p>Recibe una frase y cuenta cuántas vocales contiene. Prueba también con mayúsculas y espacios.</p>
+                        <p>Cuenta cuántas vocales aparecen en una frase, sin distinguir mayúsculas de minúsculas.</p>
+                        <p><strong>Entrada:</strong> Hola Mundo<br><strong>Salida:</strong> 4</p>
+                        <p class="pista"><strong>Pista:</strong> convierte el texto a minúsculas y revisa cada carácter.</p>
+                        <details>
+                            <summary>Mostrar solución en Java y Python</summary>
+                            <div class="solucion-codigo">
+                                <h4>Python</h4>
+                                <pre><code>frase = "Hola Mundo".lower()
+vocales = "aeiou"
+cantidad = sum(1 for letra in frase if letra in vocales)
+print(cantidad)</code></pre>
+                                <h4>Java</h4>
+                                <pre><code>public class Main {
+    public static void main(String[] args) {
+        String frase = "Hola Mundo".toLowerCase();
+        int cantidad = 0;
+        for (int i = 0; i < frase.length(); i++) {
+            if ("aeiou".indexOf(frase.charAt(i)) >= 0) cantidad++;
+        }
+        System.out.println(cantidad);
+    }
+}</code></pre>
+                            </div>
+                        </details>
                     </article>
                 </div>
             </div>
@@ -67,8 +208,7 @@
     <footer>
         <div class="footer-contenido">
             <div class="footer-contacto">
-                <p class="footer-dato">Tibra Jimenez<img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+                <p>Aprende a programar · Java y Python</p>
             </div>
             <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
         </div>

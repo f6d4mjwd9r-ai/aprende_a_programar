@@ -4,107 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
-    <title>Algoritmos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css?v=20261021-croquis-didactico">
-    <script src="chatbot.js?v=20261019" defer></script>
+    <title>La lógica antes de programar | Aprende a programar</title>
+    <meta name="description" content="Aprende a planear una solución con pensamiento crítico y a traducir los pasos de un algoritmo a Java y Python.">
+    <meta http-equiv="refresh" content="0; url=fundamentos.html#razonamiento-algoritmico">
+    <link rel="canonical" href="fundamentos.html#razonamiento-algoritmico">
 </head>
 <body>
-    <nav>
-        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
-        <ul class="menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
-            <li><a href="tutoriales.html">Tutoriales</a></li>
-            <li><a href="ejercicios.html">Ejercicios</a></li>
-            <li><a href="errores.html">Errores comunes</a></li>
-            <li><a href="acerca.html">Acerca de</a></li>
-        </ul>
-    </nav>
-    <header class="header page-banner">
-        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
-    </header>
-    <main>
-        <section class="seccion detalle-fundamento">
-            <div class="contenedor detalle-contenido">
-                <p class="sobrelinea">Fundamentos · Resolver problemas</p>
-                <h1>Algoritmos</h1>
-                <p class="introduccion">Un algoritmo es una serie de instrucciones claras y ordenadas que permite resolver un problema. Una receta, las indicaciones para llegar a un lugar y un programa son ejemplos de algoritmos.</p>
-                <h2>Cómo diseñar uno</h2>
-                <p>Antes de escribir código, identifica qué información tienes, qué resultado necesitas y qué pasos conectan ambos. Por ejemplo, para calcular el promedio de dos notas, se reciben las notas, se suman y el total se divide entre dos.</p>
-                <ul>
-                    <li><strong>Entrada:</strong> los datos que el problema proporciona, como dos notas.</li>
-                    <li><strong>Proceso:</strong> las operaciones que transforman esos datos.</li>
-                    <li><strong>Salida:</strong> el resultado que se comunica, como el promedio.</li>
-                </ul>
-                <figure class="croquis-funcion" aria-labelledby="croquis-algoritmo-titulo">
-                    <figcaption id="croquis-algoritmo-titulo">Croquis: entrada → proceso → salida</figcaption>
-                    <div class="croquis-flujo">
-                        <div class="croquis-paso">
-                            <span class="croquis-etiqueta">Entrada</span>
-                            <code>nota1 = 8<br>nota2 = 10</code>
-                            <span>Datos que recibe el problema.</span>
-                        </div>
-                        <span class="croquis-flecha" aria-hidden="true">→</span>
-                        <div class="croquis-paso croquis-proceso">
-                            <span class="croquis-etiqueta">Proceso</span>
-                            <code>(8 + 10) / 2</code>
-                            <span>Sumar y dividir entre dos.</span>
-                        </div>
-                        <span class="croquis-flecha" aria-hidden="true">→</span>
-                        <div class="croquis-paso croquis-salida">
-                            <span class="croquis-etiqueta">Salida</span>
-                            <code>promedio = 9</code>
-                            <span>Resultado que comunica el programa.</span>
-                        </div>
-                    </div>
-                    <p class="croquis-idea"><strong>En simple:</strong> primero tenemos los datos, luego hacemos las cuentas y al final obtenemos la respuesta.</p>
-                </figure>
-                <h2>El mismo algoritmo en Java y Python</h2>
-                <p>La lógica no depende del lenguaje. En ambos ejemplos se calcula el promedio; lo que cambia es la forma de escribir las instrucciones.</p>
-                <div class="detalle-codigo">
-                    <div>
-                        <h3>Java</h3>
-                        <pre><code>public class Main {
-    public static void main(String[] args) {
-        double nota1 = 8.0;
-        double nota2 = 10.0;
-        double promedio = (nota1 + nota2) / 2;
-        System.out.println(promedio);
-    }
-}</code></pre>
-                    </div>
-                    <div>
-                        <h3>Python</h3>
-                        <pre><code>nota1 = 8.0
-nota2 = 10.0
-promedio = (nota1 + nota2) / 2
-print(promedio)</code></pre>
-                    </div>
-                </div>
-                <div class="explicacion-ejemplo">
-                    <h2>¿Qué hace el programa paso a paso?</h2>
-                    <ol>
-                        <li><code>nota1</code> y <code>nota2</code> guardan las calificaciones 8 y 10. <code>double</code> en Java y los números con decimal en Python permiten trabajar con resultados fraccionarios.</li>
-                        <li><code>(nota1 + nota2)</code> suma las dos notas: <code>8 + 10 = 18</code>.</li>
-                        <li>Al dividir la suma entre <code>2</code>, el programa calcula el promedio: <code>18 / 2 = 9</code>.</li>
-                        <li>El resultado se guarda en <code>promedio</code>. <code>System.out.println</code> en Java y <code>print</code> en Python lo muestran en pantalla.</li>
-                    </ol>
-                    <p class="resultado-ejemplo"><strong>Lo que verás en la consola:</strong><code>9.0</code></p>
-                </div>
-                <h2>Comprueba la solución</h2>
-                <p>Prueba el algoritmo con distintos valores y verifica el resultado a mano. También considera casos especiales: ¿qué ocurre si falta una nota o si el problema permite más de dos?</p>
-                <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-contenido">
-            <div class="footer-contacto">
-                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
-            </div>
-            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
-        </div>
-    </footer>
+    <p>La explicación de algoritmos ahora está en <a href="fundamentos.html#razonamiento-algoritmico">Fundamentos: la lógica antes de programar</a>.</p>
 </body>
 </html>

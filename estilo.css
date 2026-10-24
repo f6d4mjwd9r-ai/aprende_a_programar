@@ -116,7 +116,7 @@ nav {
 
 .inicio-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
     margin-top: 32px;
 }
@@ -392,6 +392,45 @@ a:focus-visible {
     margin: 18px 0 0 24px;
     color: #333;
     line-height: 1.6;
+}
+
+.razonamiento-papel {
+    margin-top: 22px;
+    padding: 22px 24px 22px 58px;
+    border: 1px solid #e1e4db;
+    border-left: 3px solid var(--coral);
+    background-color: #fffef8;
+    background-image:
+        linear-gradient(90deg, transparent 0 38px, rgba(241, 109, 83, 0.25) 38px 40px, transparent 40px),
+        repeating-linear-gradient(to bottom, transparent 0 31px, #e6ebe5 31px 32px);
+    box-shadow: 0 3px 12px rgba(25, 34, 30, 0.06);
+}
+
+.papel-pasos {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding-left: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.papel-pasos li {
+    padding-left: 4px;
+}
+
+.papel-pasos strong,
+.papel-pasos span {
+    display: block;
+}
+
+.papel-pasos strong {
+    color: var(--bosque);
+}
+
+.papel-conclusion {
+    padding-top: 12px;
+    border-top: 1px solid #d9dfe7;
 }
 
 .croquis-funcion {
@@ -723,6 +762,70 @@ a:focus-visible {
     gap: 48px;
 }
 
+.tutoriales-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.tutorial-ejemplo {
+    min-width: 0;
+    padding: 24px;
+    border-top: 3px solid var(--coral);
+    background-color: white;
+    box-shadow: 0 3px 12px rgba(25, 34, 30, 0.06);
+}
+
+.tutorial-ejemplo h2 {
+    color: var(--bosque);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+}
+
+.tutorial-codigo {
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 2px;
+    background-color: var(--tinta);
+    color: white;
+}
+
+.tutorial-codigo h3 {
+    margin-top: 14px;
+    color: var(--lima);
+    font-size: 16px;
+}
+
+.tutorial-codigo h3:first-child {
+    margin-top: 0;
+}
+
+.tutorial-codigo pre {
+    overflow-x: auto;
+    margin-top: 8px;
+    color: #d1e2f3;
+    font-family: Consolas, monospace;
+    line-height: 1.6;
+}
+
+.tutorial-codigo .nota-codigo {
+    margin-top: 16px;
+    color: #e3e9e3;
+    line-height: 1.6;
+}
+
+.tutoriales > .contenedor > .nota-codigo {
+    margin-top: 24px;
+    color: #333;
+}
+
+.tutoriales > .contenedor > .nota-codigo a {
+    color: var(--bosque);
+    font-weight: 700;
+}
+
 .lista-pasos {
     display: grid;
     gap: 16px;
@@ -768,14 +871,17 @@ a:focus-visible {
 
 .ejercicios-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     margin-top: 30px;
 }
 
 .ejercicio {
+    min-width: 0;
+    padding: 20px;
     padding-top: 16px;
     border-top: 2px solid var(--coral);
+    background-color: var(--papel);
 }
 
 .ejercicio h3 {
@@ -783,6 +889,55 @@ a:focus-visible {
     color: var(--bosque);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 20px;
+}
+
+.ejercicio p {
+    margin-top: 10px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.ejercicio .pista {
+    padding-top: 10px;
+    border-top: 1px solid #d3dfd4;
+}
+
+.ejercicio details {
+    margin-top: 16px;
+    border-top: 1px solid #d3dfd4;
+}
+
+.ejercicio summary {
+    padding: 12px 0;
+    color: var(--bosque);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ejercicio summary:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 3px;
+}
+
+.solucion-codigo {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
+.solucion-codigo h4 {
+    margin-top: 8px;
+    color: var(--bosque);
+}
+
+.solucion-codigo pre {
+    overflow-x: auto;
+    padding: 14px;
+    border-radius: 2px;
+    background-color: var(--tinta);
+    color: #d1e2f3;
+    font-family: Consolas, monospace;
+    line-height: 1.6;
 }
 
 .errores {
@@ -835,11 +990,86 @@ a:focus-visible {
     line-height: 1.6;
 }
 
+.errores-grid dd pre {
+    overflow-x: auto;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 2px;
+    background: var(--tinta);
+    color: #d1e2f3;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.errores-grid dd p + p {
+    margin-top: 10px;
+}
+
+.acerca-contenido h2 {
+    margin-top: 28px;
+    color: var(--bosque);
+    font-size: 24px;
+}
+
+.acerca-contenido ul {
+    display: grid;
+    gap: 10px;
+    margin: 14px 0 0 24px;
+    color: #333;
+    line-height: 1.7;
+}
+
+.ruta-aprendizaje {
+    margin-top: 48px;
+    padding: 24px;
+    border-left: 4px solid var(--coral);
+    background-color: white;
+    box-shadow: 0 3px 12px rgba(25, 34, 30, 0.06);
+}
+
+.ruta-aprendizaje h2 {
+    color: var(--bosque);
+    font-size: 24px;
+}
+
+.ruta-aprendizaje ol {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+    padding-left: 24px;
+    line-height: 1.6;
+}
+
+.ruta-aprendizaje a {
+    color: var(--bosque);
+    font-weight: 700;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 3px;
+}
+
+.ruta-aprendizaje p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.guia-pasos {
+    display: grid;
+    gap: 12px;
+    margin: 16px 0 0 24px;
+    color: #333;
+    line-height: 1.7;
+}
+
+.guia-pasos a {
+    color: var(--bosque);
+}
+
 .acerca-contenido {
     max-width: 760px;
 }
 
-.acerca-contenido > p:last-child {
+.acerca-contenido > p {
     margin-top: 14px;
     color: #333;
     line-height: 1.7;
@@ -912,7 +1142,19 @@ footer .footer-programacion {
 .chatbot-formulario button {
     border: 0;
     border-radius: 6px;
-    background-color: var(--bosque);
+    background-    color: var(--bosque);
+}
+
+@media (max-width: 900px) {
+    .inicio-grid,
+    .temas-grid,
+    .errores-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ruta-aprendizaje ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     color: white;
     font: inherit;
     font-weight: 700;
@@ -1097,12 +1339,6 @@ footer h2 {
    RESPONSIVE
 ------------------------------ */
 
-@media (max-width: 1000px) {
-    .inicio-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
 @media (max-width: 700px) {
 
     nav {
@@ -1122,6 +1358,17 @@ footer h2 {
     }
 
     .inicio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .temas-grid,
+    .errores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ruta-aprendizaje ol,
+    .tutoriales-grid,
+    .ejercicios-grid {
         grid-template-columns: 1fr;
     }
 
