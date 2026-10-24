@@ -125,13 +125,7 @@ nav {
 .inicio-hero-contenido {
     max-width: 590px;
     padding: clamp(24px, 4vw, 42px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 4px solid var(--coral);
-    border-radius: 12px;
-    background: rgba(12, 20, 17, 0.62);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
     color: white;
-    backdrop-filter: blur(5px);
     animation: entrada-suave 650ms ease-out 180ms both;
 }
 
