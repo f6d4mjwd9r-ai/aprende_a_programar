@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Funciones | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Aprende a definir funciones, usar parámetros y devolver resultados en Java y Python.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -29,14 +31,37 @@
                 <h1>Funciones</h1>
                 <p class="introduccion">Una función agrupa instrucciones que realizan una tarea. Puedes darle un nombre y ejecutarla cada vez que la necesites, en lugar de copiar el mismo código en varios lugares.</p>
                 <h2>Parámetros y resultados</h2>
-                <p>Los parámetros son los datos que recibe una función. Si la función calcula algo, puede devolver el resultado con <code>return</code>. Así, otras partes del programa pueden utilizarlo.</p>
+                <p>Los parámetros son los datos que recibe una función. Al llamarla, los valores concretos que le pasas se llaman argumentos. Si la función calcula algo, puede devolver el resultado con <code>return</code>; así, otras partes del programa pueden guardarlo, mostrarlo o usarlo en otro cálculo.</p>
                 <ul>
                     <li>Define la tarea con un nombre claro.</li>
-                    <li>Recibe como parámetros solo los datos que necesita.</li>
-                    <li>Devuelve un resultado si la tarea produce uno.</li>
+                    <li>Recibe como parámetros solo los datos que necesita; los argumentos se asignan a esos parámetros al hacer la llamada.</li>
+                    <li>Devuelve un resultado con <code>return</code> si la tarea produce uno.</li>
                 </ul>
                 <h2>Calcular el área de un rectángulo</h2>
                 <p>La función recibe el ancho y el alto, los multiplica y devuelve el área. En Java, las funciones que pertenecen a una clase se llaman métodos.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-funcion-titulo">
+                    <figcaption id="croquis-funcion-titulo">Croquis: cómo trabaja la función <code>area</code></figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Llamada y argumentos</span>
+                            <code>area(4.0, 3.0)</code>
+                            <span>El programa entrega ancho y alto.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">La función recibe los parámetros</span>
+                            <code>ancho = 4.0<br>alto = 3.0</code>
+                            <span>Calcula <code>ancho * alto</code>.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Valor devuelto con <code>return</code></span>
+                            <code>12.0</code>
+                            <span>El programa puede guardarlo o mostrarlo.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> la función recibe datos, hace su tarea y entrega el resultado al programa que la llamó.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>
@@ -46,7 +71,7 @@
     }
 
     public static void main(String[] args) {
-        System.out.println(area(4, 3));
+        System.out.println(area(4.0, 3.0));
     }
 }</code></pre>
                     </div>
@@ -55,10 +80,24 @@
                         <pre><code>def area(ancho, alto):
     return ancho * alto
 
-resultado = area(4, 3)
+resultado = area(4.0, 3.0)
 print(resultado)</code></pre>
                     </div>
                 </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Qué hace el programa paso a paso?</h2>
+                    <ol>
+                        <li>La definición empieza con <code>def area(ancho, alto)</code> en Python o con <code>static double area(double ancho, double alto)</code> en Java. Definirla prepara las instrucciones, pero no calcula el área todavía.</li>
+                        <li>El programa llama a la función con <code>area(4.0, 3.0)</code>. Esa llamada inicia la tarea y pasa dos argumentos: <code>4.0</code> y <code>3.0</code>.</li>
+                        <li>Al comenzar la ejecución, esos argumentos se asignan a los parámetros <code>ancho</code> y <code>alto</code>. La función calcula <code>ancho * alto</code>.</li>
+                        <li><code>return</code> devuelve el resultado <code>12.0</code> al lugar donde se hizo la llamada y termina esa ejecución de la función.</li>
+                        <li>Python guarda el valor devuelto en <code>resultado</code> y después lo imprime. Java pasa el valor devuelto directamente a <code>System.out.println</code>.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Lo que verás en la consola:</strong><code>12.0</code></p>
+                </div>
+                <h2>Devolver un valor no es lo mismo que mostrarlo</h2>
+                <p><code>return</code> entrega un valor para que el programa lo pueda seguir usando. <code>print</code> en Python y <code>System.out.println</code> en Java solo muestran información en la consola. Por ejemplo, una función que devuelve un área permite guardarla en una variable o compararla; mostrarla es una acción separada.</p>
+                <p>No todas las funciones tienen que devolver un resultado: algunas realizan una acción, como mostrar un mensaje. En Java, un método que no devuelve un valor se declara con <code>void</code>; en Python, se puede escribir una función sin <code>return</code> explícito.</p>
                 <h2>Cuándo conviene crear una función</h2>
                 <p>Conviene cuando un bloque de instrucciones se repite, cuando una tarea se puede describir con un nombre, o cuando dividir un problema hace que el programa sea más fácil de leer y probar.</p>
                 <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
@@ -68,8 +107,7 @@ print(resultado)</code></pre>
     <footer>
         <div class="footer-contenido">
             <div class="footer-contacto">
-                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+                <p>Aprende a programar · Java y Python</p>
             </div>
             <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
         </div>

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Errores comunes | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Identifica errores frecuentes de Python y Java con mensajes reales, causas y correcciones explicadas para principiantes.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -30,28 +32,40 @@
                 <p class="introduccion">Un error puede impedir que el programa arranque o hacer que produzca un resultado incorrecto. Lee el mensaje, identifica la línea señalada y prueba una corrección.</p>
                 <dl class="errores-grid">
                     <div>
-                        <dt>Falta un punto y coma o una llave</dt>
-                        <dd>Java requiere punto y coma al final de muchas instrucciones y llaves para marcar bloques. Comprueba que estén completos y equilibrados.</dd>
+                        <dt><code>SyntaxError</code> en Python</dt>
+                        <dd><pre><code>if numero = 5:
+    print("cinco")
+SyntaxError: invalid syntax</code></pre><p>Se usó <code>=</code> para comparar. Usa <code>==</code>: <code>if numero == 5:</code>.</p></dd>
                     </div>
                     <div>
-                        <dt>La sangría es incorrecta</dt>
-                        <dd>Python usa la sangría para definir bloques. Mantén la misma cantidad de espacios en instrucciones del mismo nivel.</dd>
+                        <dt><code>IndentationError</code> en Python</dt>
+                        <dd><pre><code>if numero > 0:
+print("positivo")
+IndentationError: expected an indented block</code></pre><p>El cuerpo de <code>if</code> debe ir indentado: agrega cuatro espacios antes de <code>print</code>.</p></dd>
                     </div>
                     <div>
-                        <dt>Una variable tiene un valor inesperado</dt>
-                        <dd>Comprueba dónde se asigna, qué tipo de dato contiene y si su valor cambia durante el programa.</dd>
+                        <dt><code>cannot find symbol</code> en Java</dt>
+                        <dd><pre><code>System.out.println(nombre);
+error: cannot find symbol</code></pre><p>El compilador no conoce <code>nombre</code>. Declara la variable antes de usarla, por ejemplo <code>String nombre = "Ana";</code>.</p></dd>
                     </div>
                     <div>
-                        <dt>Una condición nunca se cumple</dt>
-                        <dd>Revisa los operadores de comparación: == compara valores, mientras que = asigna uno. Prueba casos que cubran ambas ramas.</dd>
+                        <dt>Falta <code>;</code> en Java (<code>&#39;;&#39; expected</code>)</dt>
+                        <dd><pre><code>int edad = 20
+error: ';' expected</code></pre><p>Falta el punto y coma al final de la instrucción: <code>int edad = 20;</code>.</p></dd>
                     </div>
                     <div>
-                        <dt>Un ciclo no termina</dt>
-                        <dd>Asegúrate de que la condición pueda dejar de cumplirse y de que el valor de control avance en cada repetición.</dd>
+                        <dt><code>NullPointerException</code> en Java</dt>
+                        <dd><pre><code>String nombre = null;
+System.out.println(nombre.length());
+Exception in thread "main" java.lang.NullPointerException</code></pre><p>Se intentó usar un objeto que no tiene valor. Inicializa <code>nombre</code> o comprueba que no sea <code>null</code> antes de llamar a sus métodos.</p></dd>
                     </div>
                     <div>
-                        <dt>El resultado no es el esperado</dt>
-                        <dd>Divide el problema en partes pequeñas y revisa los valores intermedios. Java ofrece depuración en el IDE; Python permite usar puntos de interrupción o <code>print()</code>.</dd>
+                        <dt>Asignar <code>=</code> en lugar de comparar con <code>==</code></dt>
+                        <dd><p>En Python, <code>if x = 5</code> da <code>SyntaxError</code>; en Java, con un <code>int</code> normalmente da error de compilación. Lee el mensaje y revisa el operador.</p><p>Para comparar, escribe <code>if (x == 5)</code> en Java o <code>if x == 5:</code> en Python.</p></dd>
+                    </div>
+                    <div>
+                        <dt>El ciclo no termina o el resultado es inesperado</dt>
+                        <dd>Comprueba que la condición pueda dejar de cumplirse y revisa los valores intermedios. Usa puntos de interrupción o imprime los valores para localizar el paso que falla.</dd>
                     </div>
                 </dl>
             </div>
@@ -60,8 +74,7 @@
     <footer>
         <div class="footer-contenido">
             <div class="footer-contacto">
-                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+                <p>Aprende a programar · Java y Python</p>
             </div>
             <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
         </div>

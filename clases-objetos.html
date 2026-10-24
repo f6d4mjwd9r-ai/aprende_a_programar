@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Clases y objetos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Comprende clases y objetos en Java y Python con ejemplos sencillos de atributos, métodos e instancias.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -30,6 +32,29 @@
                 <p class="introduccion">Una clase es una descripción que reúne datos y acciones relacionados. Un objeto es un ejemplar concreto creado a partir de esa descripción, con sus propios valores.</p>
                 <h2>Una clase para representar libros</h2>
                 <p>La clase <code>Libro</code> puede definir el título y el autor como datos, y una acción para mostrar una descripción. Cada libro creado será un objeto que tendrá sus propios datos.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-clase-titulo">
+                    <figcaption id="croquis-clase-titulo">Croquis: la clase es el molde; los objetos son los ejemplares</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Clase (molde)</span>
+                            <code>Libro</code>
+                            <span>Define los datos <code>titulo</code>, <code>autor</code> y la acción <code>mostrar()</code>.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Crear un objeto</span>
+                            <code>Libro("El principito", "Antoine")</code>
+                            <span>El constructor asigna valores al nuevo ejemplar.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Objeto y acción</span>
+                            <code>libro.mostrar()</code>
+                            <span>Muestra: El principito — Antoine.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> la clase describe cómo serán los libros; cada objeto es un libro concreto con sus propios datos.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>
@@ -47,8 +72,12 @@
     }
 }
 
-Libro libro = new Libro("El principito", "Antoine");
-libro.mostrar();</code></pre>
+public class Main {
+    public static void main(String[] args) {
+        Libro libro = new Libro("El principito", "Antoine");
+        libro.mostrar();
+    }
+}</code></pre>
                     </div>
                     <div>
                         <h3>Python</h3>
@@ -64,6 +93,17 @@ libro = Libro("El principito", "Antoine")
 libro.mostrar()</code></pre>
                     </div>
                 </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Cómo se crea y se usa el objeto?</h2>
+                    <ol>
+                        <li><code>class Libro</code> define el molde. Declara que cada libro tendrá un título, un autor y una acción para mostrarlos. El código Java está dentro de la clase <code>Main</code> y su método <code>main</code>, que es el punto de inicio del programa.</li>
+                        <li>El constructor <code>Libro(...)</code> en Java y <code>__init__(...)</code> en Python se ejecuta al crear un libro. Recibe el título y el autor y los guarda en el objeto.</li>
+                        <li><code>new Libro("El principito", "Antoine")</code> en Java y <code>Libro("El principito", "Antoine")</code> en Python crean un objeto con esos dos datos.</li>
+                        <li><code>libro.mostrar()</code> llama al método <code>mostrar</code>. El método reúne el título y el autor y los imprime separados por un guion.</li>
+                        <li>En Python, <code>self</code> se refiere al libro actual. En Java, <code>this</code> se usa dentro del constructor para distinguir los datos del objeto de los parámetros con el mismo nombre.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Lo que verás en la consola:</strong><code>El principito — Antoine</code></p>
+                </div>
                 <h2>Datos y métodos</h2>
                 <p>Los datos de un objeto se suelen llamar atributos. Las funciones definidas dentro de la clase son métodos: describen acciones que ese objeto puede realizar. En Java se accede al objeto creado mediante una referencia; en Python, <code>self</code> representa el objeto actual dentro de sus métodos.</p>
                 <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
@@ -73,8 +113,7 @@ libro.mostrar()</code></pre>
     <footer>
         <div class="footer-contenido">
             <div class="footer-contacto">
-                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+                <p>Aprende a programar · Java y Python</p>
             </div>
             <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
         </div>

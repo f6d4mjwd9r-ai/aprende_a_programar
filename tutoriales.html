@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Tutoriales | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Sigue tutoriales paso a paso de Java y Python sobre entrada de datos, condiciones, promedios, ciclos y listas.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -24,33 +26,131 @@
     </header>
     <main>
         <section class="seccion tutoriales">
-            <div class="contenedor tutoriales-layout">
-                <div>
-                    <p class="sobrelinea">Java y Python paso a paso</p>
-                    <h1>Una lógica, dos lenguajes</h1>
-                                        <p class="introduccion">Vamos a comprobar si un número es par. La lógica es igual en ambos lenguajes: calcular el residuo de dividir entre dos y verificar si es cero.</p>
-                    <ol class="lista-pasos">
-                                                <li><strong>Entrada</strong><span>El programa recibe un número entero, por ejemplo, 8.</span></li>
-                                                <li><strong>Proceso</strong><span>El operador % obtiene el residuo de la división: 8 % 2 es 0.</span></li>
-                                                <li><strong>Decisión</strong><span>La comparación residuo == 0 produce un valor verdadero o falso.</span></li>
-                                                <li><strong>Salida</strong><span>El programa muestra true/True si es par y false/False si es impar.</span></li>
-                    </ol>
-                </div>
-                <div class="ejemplo-codigo">
-                                        <p>Java: guarda el código como Main.java</p>
-                                        <pre><code>public class Main {
-    public static void main(String[] args) {
-        int numero = 8;
-        boolean esPar = numero % 2 == 0;
-        System.out.println(esPar);
-    }
-}</code></pre>
-                                        <p>Python: guarda el código como programa.py</p>
-                    <pre><code>numero = 8
+            <div class="contenedor">
+                <p class="sobrelinea">Java y Python paso a paso</p>
+                <h1>Una lógica, dos lenguajes</h1>
+                <p class="introduccion">Empieza por la idea, sigue los datos y compara cómo se escribe la misma solución en cada lenguaje. En el primer ejemplo Java, <code>Main</code> y <code>main</code> son la plantilla; por ahora, cambia solo las instrucciones dentro de <code>main</code>.</p>
+                <p class="introduccion">En los ejemplos que piden un dato, escríbelo en la consola cuando el programa lo solicite.</p>
+                <div class="tutoriales-grid">
+                    <article class="tutorial-ejemplo" id="par-impar">
+                        <h2>1. Saber si un número es par</h2>
+                        <ol class="lista-pasos">
+                            <li><strong>Entrada</strong><span>Lee un número entero, como 8.</span></li>
+                            <li><strong>Proceso</strong><span><code>%</code> obtiene el residuo: 8 % 2 es 0.</span></li>
+                            <li><strong>Decisión</strong><span>Compara el residuo con 0; así obtienes verdadero o falso.</span></li>
+                            <li><strong>Salida</strong><span>Muestra si el número es par.</span></li>
+                        </ol>
+                        <div class="tutorial-codigo">
+                            <h3>Python</h3>
+                            <pre><code>numero = int(input("Escribe un número: "))
 es_par = numero % 2 == 0
 print(es_par)</code></pre>
-                                        <p class="nota-codigo">Ejecuta Java con <code>javac Main.java</code> y luego <code>java Main</code>. Para Python usa <code>python programa.py</code> o, en Windows, <code>py programa.py</code>.</p>
+                            <h3>Java</h3>
+                            <pre><code>import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Escribe un número: ");
+        int numero = sc.nextInt();
+        boolean esPar = numero % 2 == 0;
+        System.out.println(esPar);
+        sc.close();
+    }
+}</code></pre>
+                            <p class="nota-codigo">Entrada: <code>8</code> · Salida: <code>true</code> en Java y <code>True</code> en Python.</p>
+                        </div>
+                    </article>
+                    <article class="tutorial-ejemplo">
+                        <h2>2. Calcular un promedio</h2>
+                        <ol class="lista-pasos">
+                            <li><strong>Entrada</strong><span>Recibe dos notas decimales.</span></li>
+                            <li><strong>Proceso</strong><span>Súmalas y divide entre 2.</span></li>
+                            <li><strong>Comprobación</strong><span>Con 8 y 10: (8 + 10) / 2 = 9.</span></li>
+                        </ol>
+                        <div class="tutorial-codigo">
+                            <h3>Python</h3>
+                            <pre><code>nota1 = float(input("Primera nota: "))
+nota2 = float(input("Segunda nota: "))
+promedio = (nota1 + nota2) / 2
+print(promedio)</code></pre>
+                            <h3>Java</h3>
+                            <pre><code>import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double nota1 = sc.nextDouble();
+        double nota2 = sc.nextDouble();
+        double promedio = (nota1 + nota2) / 2;
+        System.out.println(promedio);
+        sc.close();
+    }
+}</code></pre>
+                            <p class="nota-codigo">Entrada: <code>8</code> y <code>10</code> · Salida: <code>9.0</code>.</p>
+                        </div>
+                    </article>
+                    <article class="tutorial-ejemplo">
+                        <h2>3. Sumar con un ciclo</h2>
+                        <ol class="lista-pasos">
+                            <li><strong>Inicio</strong><span>Empieza con total igual a 0.</span></li>
+                            <li><strong>Repetición</strong><span>Agrega al total cada número del 1 al 5.</span></li>
+                            <li><strong>Salida</strong><span>El total final es 15.</span></li>
+                        </ol>
+                        <div class="tutorial-codigo">
+                            <h3>Python</h3>
+                            <pre><code>total = 0
+for numero in range(1, 6):
+    total += numero
+print(total)</code></pre>
+                            <h3>Java</h3>
+                            <pre><code>public class Main {
+    public static void main(String[] args) {
+        int total = 0;
+        for (int numero = 1; numero <= 5; numero++) {
+            total += numero;
+        }
+        System.out.println(total);
+    }
+}</code></pre>
+                            <p class="nota-codigo">Salida: <code>15</code>.</p>
+                        </div>
+                    </article>
+                    <article class="tutorial-ejemplo">
+                        <h2>4. Recorrer una lista</h2>
+                        <ol class="lista-pasos">
+                            <li><strong>Datos</strong><span>Guarda varios números juntos.</span></li>
+                            <li><strong>Recorrido</strong><span>Visita cada elemento con un ciclo.</span></li>
+                            <li><strong>Resultado</strong><span>Calcula y muestra la suma: 4 + 9 + 2 = 15.</span></li>
+                        </ol>
+                        <div class="tutorial-codigo">
+                            <h3>Python</h3>
+                            <pre><code>numeros = [4, 9, 2]
+total = 0
+for numero in numeros:
+    total += numero
+print(total)</code></pre>
+                            <h3>Java</h3>
+                            <pre><code>import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList&lt;Integer&gt; numeros = new ArrayList&lt;&gt;();
+        numeros.add(4);
+        numeros.add(9);
+        numeros.add(2);
+        int total = 0;
+        for (int numero : numeros) {
+            total += numero;
+        }
+        System.out.println(total);
+    }
+}</code></pre>
+                            <p class="nota-codigo">Salida: <code>15</code>.</p>
+                        </div>
+                    </article>
                 </div>
+                <p class="nota-codigo">Para probarlos en tu equipo, consulta la <a href="instalacion.html">guía de instalación y configuración</a>.</p>
             </div>
         </section>
     </main>
@@ -58,8 +158,6 @@ print(es_par)</code></pre>
         <div class="footer-contenido">
             <div class="footer-contacto">
                 <p>Aprende a programar · Java y Python</p>
-                <p class="footer-dato">Tibra Jimenez<img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
             </div>
             <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
         </div>

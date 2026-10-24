@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Matrices | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Aprende cómo organizar y consultar datos en filas y columnas con matrices en Java y Python.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -30,6 +32,20 @@
                 <p class="introduccion">Una matriz organiza valores en filas y columnas, como una tabla. Cada elemento se localiza con dos índices: el primero indica la fila y el segundo la columna. Como en los arreglos y las listas, los índices comienzan en cero.</p>
                 <h2>Declarar y consultar elementos</h2>
                 <p>En Java, una matriz de enteros se declara con <code>int[][]</code>. En Python, puede representarse como una lista cuyos elementos también son listas. En ambos casos, <code>matriz[1][2]</code> consulta el elemento de la segunda fila y la tercera columna.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-matriz-titulo">
+                    <figcaption id="croquis-matriz-titulo">Croquis: el primer índice elige la fila; el segundo, la columna</figcaption>
+                    <div class="croquis-tabla-contenedor">
+                        <table class="croquis-tabla" aria-label="Matriz de dos filas y tres columnas">
+                            <thead><tr><th scope="col">Fila \ Columna</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">0</th><td>1</td><td>2</td><td>3</td></tr>
+                                <tr><th scope="row">1</th><td>4</td><td>5</td><td class="croquis-seleccion">6</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="croquis-nota"><code>matriz[1][2]</code> → fila 1, columna 2 → <strong>6</strong>.</p>
+                    <p class="croquis-idea"><strong>En simple:</strong> para encontrar una casilla, primero baja a la fila indicada y luego avanza a la columna indicada.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>
@@ -52,8 +68,41 @@ elemento = matriz[1][2]
 print(elemento)  # 6</code></pre>
                     </div>
                 </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Cómo se localiza un valor?</h2>
+                    <ol>
+                        <li>La matriz tiene dos filas: <code>[1, 2, 3]</code> y <code>[4, 5, 6]</code>. Se puede imaginar como una tabla de dos filas por tres columnas.</li>
+                        <li>El primer índice indica la fila y el segundo indica la columna. Ambos comienzan en cero.</li>
+                        <li><code>matriz[1]</code> selecciona la segunda fila, <code>[4, 5, 6]</code>. Después, <code>[2]</code> selecciona el tercer elemento de esa fila: <code>6</code>.</li>
+                        <li>Por eso <code>matriz[1][2]</code> guarda el valor 6 en <code>elemento</code>, y <code>println</code> o <code>print</code> lo muestra.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Resultado de consultar la posición [1][2]:</strong><code>6</code></p>
+                </div>
                 <h2>Recorrer filas y columnas</h2>
                 <p>Para visitar todos los valores, se usan dos ciclos: uno para las filas y otro para las columnas. En Python, cada fila se puede recorrer directamente. En Java, los índices permiten acceder a cada elemento.</p>
+                <figure class="croquis-funcion" aria-labelledby="croquis-recorrido-matriz-titulo">
+                    <figcaption id="croquis-recorrido-matriz-titulo">Croquis: el ciclo exterior cambia la fila y el interior recorre sus columnas</figcaption>
+                    <div class="croquis-flujo">
+                        <div class="croquis-paso">
+                            <span class="croquis-etiqueta">Primera fila</span>
+                            <code>1 → 2 → 3</code>
+                            <span>Se visitan sus columnas de izquierda a derecha.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-proceso">
+                            <span class="croquis-etiqueta">Cambia la fila</span>
+                            <code>fila 0 → fila 1</code>
+                            <span>Al terminar una fila, empieza la siguiente.</span>
+                        </div>
+                        <span class="croquis-flecha" aria-hidden="true">→</span>
+                        <div class="croquis-paso croquis-salida">
+                            <span class="croquis-etiqueta">Segunda fila</span>
+                            <code>4 → 5 → 6</code>
+                            <span>El recorrido termina al visitar todos los valores.</span>
+                        </div>
+                    </div>
+                    <p class="croquis-idea"><strong>En simple:</strong> el primer ciclo cambia de fila; dentro de cada fila, el segundo ciclo visita cada columna.</p>
+                </figure>
                 <div class="detalle-codigo">
                     <div>
                         <h3>Java</h3>
@@ -72,6 +121,16 @@ print(elemento)  # 6</code></pre>
         print(elemento)</code></pre>
                     </div>
                 </div>
+                <div class="explicacion-ejemplo">
+                    <h2>¿Qué hacen los dos ciclos?</h2>
+                    <ol>
+                        <li>El ciclo exterior visita cada fila de la matriz.</li>
+                        <li>Para cada fila, el ciclo interior visita cada columna y obtiene el valor de esa posición.</li>
+                        <li>Cada valor se muestra antes de pasar al siguiente. Así se recorren primero 1, 2, 3 y después 4, 5, 6.</li>
+                        <li><code>matriz.length</code> cuenta filas; <code>matriz[fila].length</code> cuenta las columnas de esa fila. En Python, <code>for fila in matriz</code> toma una fila cada vez.</li>
+                    </ol>
+                    <p class="resultado-ejemplo"><strong>Salida del recorrido:</strong><code>1<br>2<br>3<br>4<br>5<br>6</code></p>
+                </div>
                 <h2>Revisa los límites</h2>
                 <p>Una matriz de dos filas y tres columnas tiene índices de fila 0 y 1, e índices de columna 0, 1 y 2. Consultar una posición fuera de esos límites produce un error. En Java, cada fila puede tener longitud distinta; en Python también es posible que las listas internas tengan tamaños diferentes.</p>
                 <a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a>
@@ -81,8 +140,7 @@ print(elemento)  # 6</code></pre>
     <footer>
         <div class="footer-contenido">
             <div class="footer-contacto">
-                <p class="footer-dato">Tibra Jimenez <img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+                <p>Aprende a programar · Java y Python</p>
             </div>
             <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
         </div>

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
     <title>Fundamentos | Aprende a programar</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Aprende fundamentos de Java y Python: lógica, variables, condiciones, ciclos, funciones, entrada de datos y estructuras.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
 </head>
 <body>
     <nav>
@@ -28,28 +30,41 @@
                 <p class="sobrelinea">Primeros pasos</p>
                 <h1>Fundamentos de Java y Python</h1>
                 <p class="introduccion">Java y Python permiten crear instrucciones, trabajar con datos y resolver problemas. Comparten conceptos como variables, condiciones y ciclos, pero difieren en la sintaxis y en los paradigmas que enfatizan.</p>
-                <p class="introduccion">Pulsa «Ejecutar ejemplo» en una tarjeta para ver una simulación local de su resultado. Los ejemplos son demostrativos; no ejecutan código Java o Python libre.</p>
+                <p class="introduccion">Cada tarjeta explica un concepto y permite consultar un resultado de ejemplo. Los resultados son simulaciones locales: no ejecutan código Java o Python libre.</p>
                 <div class="temas-grid">
                     <article class="tema tema-interactivo">
                         <a class="tema-contenido" href="algoritmos.html">
                             <span class="tema-icono" aria-hidden="true">
                                 <svg viewBox="0 0 48 48" fill="none">
-                                    <rect x="17" y="4" width="14" height="10" rx="2"/>
-                                    <rect x="17" y="34" width="14" height="10" rx="2"/>
-                                    <path d="M24 14v7m0 12v-7m-7-3h14"/>
-                                    <path class="tema-icono-acento" d="m21 18 3 3 3-3m-6 11 3-3 3 3"/>
+                                    <path d="M12 5h18l7 7v31H12z"/>
+                                    <path d="M30 5v8h7M18 21h13M18 27h13M18 33h7"/>
+                                    <path class="tema-icono-acento" d="m27 37 8-8 4 4-8 8-5 1z"/>
                                 </svg>
                             </span>
-                            <h2>Algoritmos</h2>
-                            <p>Son conjuntos ordenados de pasos para resolver un problema o completar una tarea.</p>
-                            <p class="ejemplo">Ejemplo: leer dos números, sumarlos y mostrar el resultado.</p>
+                            <h2>Piensa la lógica en papel</h2>
+                            <p>Antes de programar, entiende qué pide el problema, separa los datos y decide qué pasos podrían resolverlo.</p>
+                            <p class="ejemplo">Prueba tu razonamiento con ejemplos y comprueba si el resultado tiene sentido.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="algoritmos" aria-expanded="false" aria-controls="salida-algoritmos">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="algoritmos" aria-expanded="false" aria-controls="salida-algoritmos">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-algoritmos" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
                         </div>
+                    </article>
+                    <article class="tema tema-interactivo">
+                        <a class="tema-contenido" href="entrada-datos.html">
+                            <span class="tema-icono" aria-hidden="true">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <path d="M7 11h34v26H7zM13 18h10M13 24h7M13 30h13"/>
+                                    <path class="tema-icono-acento" d="m31 25 5 5 5-5m-5 5V17"/>
+                                </svg>
+                            </span>
+                            <h2>Entrada de datos</h2>
+                            <p>Aprende a pedir un dato a quien usa el programa y guardarlo para utilizarlo en tus operaciones.</p>
+                            <p class="ejemplo">Python usa <code>input()</code>; Java puede leer con <code>Scanner</code>.</p>
+                            <span class="tema-accion">Ver lección</span>
+                        </a>
                     </article>
                     <article class="tema tema-interactivo">
                         <a class="tema-contenido" href="datos-variables.html">
@@ -64,7 +79,7 @@
                             <p class="ejemplo">Java: <code>int edad = 20;</code> · Python: <code>edad = 20</code>. En Python puedes consultar un tipo con <code>type(edad)</code>.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="variables" aria-expanded="false" aria-controls="salida-variables">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="variables" aria-expanded="false" aria-controls="salida-variables">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-variables" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
@@ -84,7 +99,7 @@
                             <p class="ejemplo">Java usa llaves y suele escribir <code>else if</code>; Python usa dos puntos, sangría y <code>elif</code>.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="condiciones" aria-expanded="false" aria-controls="salida-condiciones">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="condiciones" aria-expanded="false" aria-controls="salida-condiciones">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-condiciones" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
@@ -100,11 +115,11 @@
                                 </svg>
                             </span>
                             <h2>Funciones</h2>
-                            <p>Una función agrupa instrucciones bajo un nombre. Puede recibir parámetros y devolver un resultado. En Java, las funciones asociadas a una clase se llaman métodos.</p>
+                            <p>Una función agrupa instrucciones bajo un nombre. En Java, toda función pertenece a una clase y se llama método. En Python, las funciones pueden existir solas; las que están dentro de una clase también se llaman métodos.</p>
                             <p class="ejemplo">Python las define con <code>def</code>; Java especifica el tipo que devuelve y el de cada parámetro.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="funciones" aria-expanded="false" aria-controls="salida-funciones">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="funciones" aria-expanded="false" aria-controls="salida-funciones">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-funciones" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
@@ -123,7 +138,7 @@
                             <p class="ejemplo">Java usa <code>charAt</code>; Python permite indexar y obtener segmentos con cortes.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="cadenas" aria-expanded="false" aria-controls="salida-cadenas">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="cadenas" aria-expanded="false" aria-controls="salida-cadenas">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-cadenas" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
@@ -143,7 +158,7 @@
                             <p class="ejemplo">Una lista de calificaciones facilita calcular un promedio sin crear una variable por cada nota.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="listas" aria-expanded="false" aria-controls="salida-listas">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="listas" aria-expanded="false" aria-controls="salida-listas">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-listas" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
@@ -163,7 +178,7 @@
                             <p class="ejemplo">En Java se usa <code>int[][]</code>; en Python, una lista de listas.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="matrices" aria-expanded="false" aria-controls="salida-matrices">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="matrices" aria-expanded="false" aria-controls="salida-matrices">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-matrices" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
@@ -183,7 +198,7 @@
                             <p class="ejemplo">Una clase <code>Libro</code> podría guardar el título y el autor de cada libro.</p>
                             <span class="tema-accion">Ver explicación completa</span>
                         </a>
-                        <button class="tema-ejecutar" type="button" data-demo="clases" aria-expanded="false" aria-controls="salida-clases">Ejecutar ejemplo</button>
+                        <button class="tema-ejecutar" type="button" data-demo="clases" aria-expanded="false" aria-controls="salida-clases">Ver resultado de ejemplo</button>
                         <div class="salida-ejecucion" id="salida-clases" hidden>
                             <p>Consola · simulación local</p>
                             <pre aria-live="polite"></pre>
@@ -196,12 +211,11 @@
     <footer>
         <div class="footer-contenido">
             <div class="footer-contacto">
-                <p class="footer-dato">Tibra Jimenez<img class="footer-icono" src="icono-persona.svg" alt=""></p>
-                <p class="footer-dato"><a href="mailto:tibramariana@gmail.com">tibramariana@gmail.com</a> <img class="footer-icono" src="icono-correo.svg" alt=""></p>
+                <p>Aprende a programar · Java y Python</p>
             </div>
             <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
         </div>
     </footer>
-    <script src="fundamentos.js"></script>
+    <script src="fundamentos.js?v=20261024-mejoras"></script>
 </body>
 </html>

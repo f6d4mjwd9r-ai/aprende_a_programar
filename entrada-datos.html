@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon-aprende.svg">
+    <title>Entrada de datos | Aprende a programar</title>
+    <meta name="description" content="Aprende a leer datos escritos por el usuario con input() en Python y Scanner en Java, con ejemplos y resultados.">
+    <link rel="stylesheet" href="estilo.css?v=20261024-mejoras">
+    <script src="chatbot.js?v=20261019" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="tituloprincipal"><p class="marca-sitio">Programación básica</p></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fundamentos.html" aria-current="page">Fundamentos</a></li>
+            <li><a href="tutoriales.html">Tutoriales</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="errores.html">Errores comunes</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <header class="header page-banner">
+        <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
+    </header>
+    <main>
+        <section class="seccion detalle-fundamento">
+            <div class="contenedor detalle-contenido">
+                <p class="sobrelinea">Fundamentos · Datos</p>
+                <h1>Entrada de datos</h1>
+                <p class="introduccion">Un programa puede pedir información a la persona que lo usa. Leer una entrada permite resolver el problema con datos distintos cada vez, en lugar de dejar un valor fijo en el código.</p>
+                <h2>Python: <code>input()</code></h2>
+                <p><code>input()</code> muestra un mensaje y espera a que escribas algo. El texto leído se convierte a número con <code>int()</code>; para decimales, usa <code>float()</code>.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Python</h3>
+                        <pre><code>edad = int(input("Escribe tu edad: "))
+print("Tu edad es", edad)</code></pre>
+                    </div>
+                    <div>
+                        <h3>Ejemplo</h3>
+                        <pre><code>Entrada:
+Escribe tu edad: 18
+
+Salida:
+Tu edad es 18</code></pre>
+                    </div>
+                </div>
+                <h2>Java: <code>Scanner</code></h2>
+                <p>Java usa la clase <code>Scanner</code> para leer desde la consola. <code>nextInt()</code> lee un entero y <code>nextDouble()</code> lee un decimal.</p>
+                <p class="nota-codigo">La clase <code>Main</code> y el método <code>main</code> son la plantilla inicial del programa Java. Por ahora, puedes concentrarte en las instrucciones dentro de <code>main</code>.</p>
+                <div class="detalle-codigo">
+                    <div>
+                        <h3>Java</h3>
+                        <pre><code>import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Escribe tu edad: ");
+        int edad = sc.nextInt();
+        System.out.println("Tu edad es " + edad);
+        sc.close();
+    }
+}</code></pre>
+                    </div>
+                    <div>
+                        <h3>Ejemplo</h3>
+                        <pre><code>Entrada:
+Escribe tu edad: 18
+
+Salida:
+Tu edad es 18</code></pre>
+                    </div>
+                </div>
+                <div class="explicacion-ejemplo">
+                    <h2>Recuerda</h2>
+                    <ol>
+                        <li>La entrada es lo que la persona escribe cuando el programa la solicita.</li>
+                        <li>En Python, <code>input()</code> entrega texto; conviértelo con <code>int()</code> o <code>float()</code> si vas a hacer cálculos.</li>
+                        <li>En Java, <code>Scanner</code> ofrece métodos distintos según el tipo, como <code>nextInt()</code> y <code>nextDouble()</code>.</li>
+                    </ol>
+                </div>
+                <p><a class="volver-fundamentos" href="fundamentos.html">← Volver a Fundamentos</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-contacto"><p>Aprende a programar · Java y Python</p></div>
+            <img class="footer-programacion" src="icono-programacion.svg" alt="Símbolo de programación">
+        </div>
+    </footer>
+</body>
+</html>
