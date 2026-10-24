@@ -27,16 +27,6 @@
 
     <header class="header inicio-hero" id="inicio">
         <img class="logo-sitio" src="logo-aprende-programar.svg" alt="Aprende a programar en Java y Python">
-        <div class="inicio-hero-contenido">
-            <p class="inicio-hero-etiqueta">Java y Python para principiantes</p>
-            <h1>Aprende a programar <span>desde cero</span></h1>
-            <p>Comprende la lógica, explora ejemplos y practica paso a paso. No necesitas experiencia previa para comenzar.</p>
-            <div class="inicio-hero-acciones">
-                <a class="inicio-cta-principal" href="fundamentos.html">Comenzar por Fundamentos <span aria-hidden="true">→</span></a>
-                <a class="inicio-cta-secundario" href="tutoriales.html">Explorar tutoriales</a>
-            </div>
-            <p class="inicio-hero-nota">Aprende a tu ritmo · Practica con ejemplos</p>
-        </div>
     </header>
 
     <main>
@@ -84,14 +74,37 @@
                     </a>
                 </div>
                 <section class="ruta-aprendizaje" aria-labelledby="ruta-aprendizaje-titulo">
-                    <h2 id="ruta-aprendizaje-titulo">Tu ruta de aprendizaje</h2>
-                    <ol>
-                        <li><a href="fundamentos.html">Fundamentos</a></li>
-                        <li><a href="tutoriales.html">Tutoriales paso a paso</a></li>
-                        <li><a href="ejercicios.html">Retos para practicar</a></li>
-                        <li><a href="errores.html">Errores comunes y cómo corregirlos</a></li>
+                    <p class="sobrelinea">Un paso a la vez</p>
+                    <h2 id="ruta-aprendizaje-titulo">Tu ruta para aprender</h2>
+                    <p class="ruta-introduccion">Sigue este recorrido y avanza desde los conceptos básicos hasta resolver problemas por tu cuenta.</p>
+                    <ol class="ruta-pasos">
+                        <li class="ruta-paso">
+                            <span class="ruta-numero" aria-hidden="true">01</span>
+                            <div><a href="fundamentos.html">Fundamentos</a><p>Conoce la lógica, las variables y las estructuras básicas.</p></div>
+                        </li>
+                        <li class="ruta-paso">
+                            <span class="ruta-numero" aria-hidden="true">02</span>
+                            <div><a href="tutoriales.html">Tutoriales paso a paso</a><p>Mira cómo convertir una idea en instrucciones.</p></div>
+                        </li>
+                        <li class="ruta-paso">
+                            <span class="ruta-numero" aria-hidden="true">03</span>
+                            <div><a href="ejercicios.html">Retos para practicar</a><p>Aplica lo aprendido con ejercicios propios.</p></div>
+                        </li>
+                        <li class="ruta-paso">
+                            <span class="ruta-numero" aria-hidden="true">04</span>
+                            <div><a href="errores.html">Errores comunes</a><p>Aprende a reconocerlos y corregirlos con calma.</p></div>
+                        </li>
                     </ol>
-                    <p>¿Necesitas preparar tu equipo? Consulta la <a href="instalacion.html">guía de instalación de Python, Java y un editor</a>.</p>
+                    <div class="ruta-instalacion">
+                        <span class="ruta-instalacion-icono" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="4" y="4" width="16" height="12" rx="1.5"/>
+                                <path d="M2.5 20h19M9 16l-1 4m7-4 1 4M8 9l-2 3 2 2m8-5 2 3-2 2m-3-6-2 6"/>
+                            </svg>
+                        </span>
+                        <p><strong>¿Aún no tienes listo tu equipo?</strong><span>Prepara Python, Java y tu editor con nuestra guía.</span></p>
+                        <a href="instalacion.html">Ver guía de instalación <span aria-hidden="true">→</span></a>
+                    </div>
                 </section>
             </div>
         </section>
